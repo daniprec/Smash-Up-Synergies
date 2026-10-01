@@ -130,7 +130,7 @@
   const rankingDefinitions = {
     synergies: { label:'Synergies', title:'Most good-pair connections', description:'Counts every unique recommended pairing shown for the faction.', value:(faction)=>faction.partners.length },
     counteredBy: { label:'Countered by', title:'Most counters against them', description:'Counts factions listed as counters to this faction.', value:(faction)=>faction.counters.length },
-    countersOthers: { label:'They counter', title:'Most card factions they counter', description:'Counts detailed card factions that list this faction as a counter.', value:(faction)=>factionsCountered.get(faction.name) || 0 },
+    countersOthers: { label:'They counter', title:'Most card factions they counter', description:'Number of other factions countered by this faction.', value:(faction)=>factionsCountered.get(faction.name) || 0 },
   };
   function showRankings(mode = rankingMode) {
     rankingMode = mode;
@@ -169,7 +169,7 @@
       pattern.setAttribute('id', `art-${index}`); pattern.setAttribute('patternUnits', 'userSpaceOnUse');
       pattern.setAttribute('x', '-12'); pattern.setAttribute('y', '-12'); pattern.setAttribute('width', '24'); pattern.setAttribute('height', '24');
       const image = document.createElementNS(NS, 'image'); image.setAttribute('href', node.faction.imageUrl);
-      image.setAttribute('x', '-12'); image.setAttribute('y', '-12'); image.setAttribute('width', '24'); image.setAttribute('height', '24'); image.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+      image.setAttribute('x', '-17'); image.setAttribute('y', '-17'); image.setAttribute('width', '34'); image.setAttribute('height', '34'); image.setAttribute('preserveAspectRatio', 'xMidYMid slice');
       pattern.append(image); defs.append(pattern); node.artworkFill = `url(#art-${index})`;
     }
     artworkReady = true;
