@@ -18,6 +18,8 @@ Open `index.html` in a modern browser. It is a static site suitable for GitHub P
 
 `data.js` was generated from locally held source material, but the published website contains no card images.
 
+Faction records are kept together in the generated `data.js` dataset instead of one file per node. For this small static graph, a single validated dataset prevents spelling variants and duplicated relationship nodes, keeps reciprocal-pair normalization deterministic, and avoids dozens of extra browser requests.
+
 ## Attribution
 
 The faction strengths, weaknesses, pair recommendations, and counters are credited to the [Use The Fours YouTube channel](https://www.youtube.com/@UseTheFours). Smash Up is a trademark of Alderac Entertainment Group. This independent fan project is not affiliated with or endorsed by AEG.

@@ -94,7 +94,6 @@ window.FACTION_DATA = [
       "Vampires"
     ],
     "counters": [
-      "Base removal",
       "Ninjas",
       "Princesses",
       "Super Spies",
@@ -156,8 +155,8 @@ window.FACTION_DATA = [
       "Draw often hampered by having to reveal cards"
     ],
     "partners": [
+      "Adolescent Epic Geckos",
       "Cowboys",
-      "Geckos",
       "Hydra",
       "Itty Critters",
       "Mounties",
@@ -165,7 +164,7 @@ window.FACTION_DATA = [
       "The Lion King"
     ],
     "counters": [
-      "Luchadors VILES",
+      "Luchadors",
       "Orcs",
       "Super Spies",
       "Superheroes",
@@ -228,8 +227,10 @@ window.FACTION_DATA = [
       "Avengers",
       "Big Hero 6",
       "Clerics",
+      "Clowns",
       "Dinosaurs",
       "Ghosts",
+      "Sumo Wrestlers",
       "Time Travelers"
     ],
     "counters": [
@@ -303,13 +304,10 @@ window.FACTION_DATA = [
       "Vigilantes"
     ],
     "counters": [
-      "Dungeon Rulebook",
       "Elder Things",
       "Elves",
       "Magical Girls",
-      "Polynesian Voyagers",
-      "Potion of Paralysis",
-      "Treasures"
+      "Polynesian Voyagers"
     ]
   },
   {
@@ -331,13 +329,13 @@ window.FACTION_DATA = [
     ],
     "partners": [
       "Aladdin",
-      "Beauty & The Beast",
+      "Beauty and the Beast",
       "Dwarves",
       "Elder Things",
       "Itty Critters",
       "Mermaids",
       "Smash Up All Stars",
-      "Time Travelers."
+      "Time Travelers"
     ],
     "counters": [
       "Bear Cavalry",
@@ -399,15 +397,15 @@ window.FACTION_DATA = [
       "Elves",
       "Fairies",
       "Musketeers",
-      "Nightmare Before Christmas",
       "Pirates",
       "Rulers of the Cosmos",
+      "The Nightmare Before Christmas",
       "Wizards"
     ],
     "counters": [
       "Fairies",
       "Grannies",
-      "Nightmare Before Christmas",
+      "The Nightmare Before Christmas",
       "Thieves",
       "Vikings"
     ]
@@ -508,7 +506,6 @@ window.FACTION_DATA = [
       "Wizards"
     ],
     "counters": [
-      "GES",
       "Mulan",
       "Orcs",
       "Russian Fairy Tales",
@@ -614,8 +611,8 @@ window.FACTION_DATA = [
     ],
     "counters": [
       "Dragons",
-      "Nightmare Before Christmas",
       "Teddy Bears",
+      "The Nightmare Before Christmas",
       "Tricksters",
       "Truckers"
     ]
@@ -641,12 +638,10 @@ window.FACTION_DATA = [
       "Dinosaurs",
       "Dwarves",
       "Kitty Cats",
-      "Nightmare Before Christmas",
+      "The Nightmare Before Christmas",
       "Vampires"
     ],
     "counters": [
-      "Anything that doesn't care about modifiers",
-      "Removing a base with Spirit of the Forest",
       "Time Travelers"
     ]
   },
@@ -705,18 +700,17 @@ window.FACTION_DATA = [
       "Qutcome of abilities literally comes down to coin flips"
     ],
     "partners": [
-      "All Stars",
       "Ancient Incas",
       "Dragons",
       "Ghosts",
       "Giant Ants",
       "Pirates",
-      "Shapeshifters"
+      "Shapeshifters",
+      "Smash Up All Stars"
     ],
     "counters": [
       "Ninjas",
       "Teddy Bears",
-      "The wrong flips",
       "Truckers"
     ]
   },
@@ -737,7 +731,7 @@ window.FACTION_DATA = [
       "No antagonism"
     ],
     "partners": [
-      "Avengers VINES",
+      "Avengers",
       "Dinosaurs",
       "Elder Things",
       "Elves",
@@ -808,13 +802,13 @@ window.FACTION_DATA = [
       "Success often hinges on getting Queen Fluffy and at least one Whiskers in time"
     ],
     "partners": [
+      "Adolescent Epic Geckos",
       "Ancient Egyptians",
       "Fairies",
-      "Geckos",
       "Mad Scientists",
-      "Nightmare",
       "Orcs",
       "Samurai",
+      "The Nightmare Before Christmas",
       "Tricksters",
       "Vampires",
       "Warriors"
@@ -851,8 +845,8 @@ window.FACTION_DATA = [
       "Dwarves",
       "Mad Scientists",
       "Musketeers",
-      "Nightmare",
-      "S.H.I.E.L.D."
+      "S.H.I.E.L.D.",
+      "The Nightmare Before Christmas"
     ],
     "counters": [
       "Elder Things",
@@ -877,11 +871,11 @@ window.FACTION_DATA = [
       "Absolutely walled by minion protection"
     ],
     "partners": [
-      "» Slashers",
       "Ancient Egyptians",
-      "Nightmare Before Christmas",
       "Sharks",
+      "Slashers",
       "Steampunks",
+      "The Nightmare Before Christmas",
       "Tornados"
     ],
     "counters": [
@@ -947,18 +941,16 @@ window.FACTION_DATA = [
     ],
     "partners": [
       "Grannies",
-      "Grimm Fairy Tales",
+      "Grimms' Fairy Tales",
       "Innsmouth",
       "Killer Plants",
       "Superheroes",
       "The Lion King"
     ],
     "counters": [
-      "Faster factions",
       "Ninjas",
       "Sharks",
-      "Slashers",
-      "The early game"
+      "Slashers"
     ]
   },
   {
@@ -987,7 +979,6 @@ window.FACTION_DATA = [
       "Ultimates"
     ],
     "counters": [
-      "“Zero-to-break”",
       "Bear Cavalry",
       "Polynesian Voyagers"
     ]
@@ -1010,10 +1001,10 @@ window.FACTION_DATA = [
       "I hope you like math"
     ],
     "partners": [
+      "Adolescent Epic Geckos",
       "Clerics",
       "Cyborg Apes",
       "Disco Dancers",
-      "Geckos",
       "Kree",
       "Mythic Greeks",
       "Princesses",
@@ -1045,7 +1036,6 @@ window.FACTION_DATA = [
       "Solitaire-style faction"
     ],
     "partners": [
-      "Action-intensives",
       "Bear Cavalry",
       "Grannies",
       "Kaiju",
@@ -1127,7 +1117,6 @@ window.FACTION_DATA = [
     ],
     "counters": [
       "Dragons",
-      "Emperor Penguin removal",
       "Killer Plants",
       "Mermaids",
       "Princesses",
@@ -1154,7 +1143,7 @@ window.FACTION_DATA = [
       "Cyborg Apes",
       "Giant Ants",
       "Goblins",
-      "Pearl and The Images",
+      "Pearl and the Images",
       "Princesses",
       "Russian Fairy Tales"
     ],
@@ -1218,15 +1207,14 @@ window.FACTION_DATA = [
       "Benefits of self- destruction rarely outweigh costs"
     ],
     "partners": [
+      "Adolescent Epic Geckos",
       "Dinosaurs",
-      "Geckos",
       "Hydra",
       "Kitty Cats",
       "Shapeshifters",
       "Superheroes"
     ],
     "counters": [
-      "Ancient Curse",
       "Giant Ants",
       "Killer Plants",
       "Kung Fu Fighters"
@@ -1294,12 +1282,11 @@ window.FACTION_DATA = [
       "Elves",
       "Musketeers",
       "Mythic Horses",
-      "Pearl and The Images",
+      "Pearl and the Images",
       "Superheroes",
       "Tornados"
     ],
     "counters": [
-      "Any faction that can push your minions off a base and still win it",
       "Bear Cavalry",
       "Dragons",
       "Polynesian Voyagers"
@@ -1364,8 +1351,8 @@ window.FACTION_DATA = [
     "counters": [
       "Mermaids",
       "Mulan",
-      "Nightmare Before Christmas",
       "Ninjas",
+      "The Nightmare Before Christmas",
       "Truckers"
     ]
   },
@@ -1490,7 +1477,7 @@ window.FACTION_DATA = [
     ],
     "partners": [
       "Bear Cavalry",
-      "Beauty & the Beast",
+      "Beauty and the Beast",
       "Ghosts",
       "Giant Ants",
       "Mages",
@@ -1498,8 +1485,7 @@ window.FACTION_DATA = [
     ],
     "counters": [
       "Kung Fu Fighters",
-      "Movement factions",
-      "Nightmare Before Christmas"
+      "The Nightmare Before Christmas"
     ]
   },
   {
@@ -1563,8 +1549,8 @@ window.FACTION_DATA = [
     "counters": [
       "Dragons",
       "Kung Fu Fighters",
-      "Nightmare Before Christmas",
       "Slashers",
+      "The Nightmare Before Christmas",
       "Tricksters"
     ]
   },
@@ -1627,7 +1613,6 @@ window.FACTION_DATA = [
       "Zombies"
     ],
     "counters": [
-      "Lack of base modifiers",
       "Polynesian Voyagers",
       "Sheep",
       "Sumo Wrestlers",
@@ -1726,7 +1711,6 @@ window.FACTION_DATA = [
     ],
     "counters": [
       "Anansi Tales",
-      "Anything faster and more consistent",
       "Ignobles"
     ]
   },
@@ -1753,8 +1737,8 @@ window.FACTION_DATA = [
       "Dragons",
       "Killer Plants",
       "Kitty Cats",
-      "Nightmare Before Christmas",
       "Sharks",
+      "The Nightmare Before Christmas",
       "Tornados"
     ],
     "counters": [
@@ -1781,11 +1765,11 @@ window.FACTION_DATA = [
       "» 20 unique cards means less consistency even with some draw"
     ],
     "partners": [
-      "All Stars",
       "Anansi Tales",
       "Disco Dancers",
       "Itty Critters",
       "Musketeers",
+      "Smash Up All Stars",
       "Time Travelers",
       "Wizards",
       "Wraithrustlers"
