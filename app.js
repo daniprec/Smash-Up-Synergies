@@ -4,6 +4,7 @@
   const search = document.querySelector('#search');
   const factionOptions = document.querySelector('#faction-options');
   const filterButtons = [...document.querySelectorAll('.filter')];
+  const rankingsButton = document.querySelector('#rankings');
   const resetButton = document.querySelector('#reset');
   const NS = 'http://www.w3.org/2000/svg';
   const width = () => svg.clientWidth;
@@ -18,6 +19,12 @@
   const nodeById = new Map(nodes.map((n) => [n.id, n]));
   factionOptions.innerHTML = nodes.map((node) => `<option value="${node.id}"></option>`).join('');
   const visibleEdgeTypes = new Set(['pair', 'counter']);
+  const factionsCountered = new Map(sources.map((faction) => [faction.name, 0]));
+  for (const faction of sources) {
+    for (const counter of faction.counters) {
+      if (factionsCountered.has(counter)) factionsCountered.set(counter, factionsCountered.get(counter) + 1);
+    }
+  }
   const edgeKey = (a,b,type) => type === 'pair' ? `${type}:${[a,b].sort().join('|')}` : `${type}:${a}>${b}`;
   const seen = new Set();
   const edges = [];
@@ -65,6 +72,7 @@
 
   let transform = { x:0, y:0, k:1 };
   let selected = null;
+  let rankingMode = 'synergies';
   let dragged = null;
   let pan = null;
   const connected = (node) => new Set(edges.filter((e) => e.source===node || e.target===node).flatMap((e) => [e.source,e.target]));
@@ -99,6 +107,7 @@
 
   function selectNode(node) {
     selected = node;
+    rankingsButton.classList.remove('active');
     const near = connected(node); near.add(node);
     for (const n of nodes) { n.el.classList.toggle('selected', n===node); n.el.classList.toggle('dim', !near.has(n)); }
     for (const e of edges) { const active=e.source===node||e.target===node; e.el.classList.toggle('active',active); e.el.classList.toggle('dim',!active); }
@@ -116,6 +125,22 @@
   function listSection(title, cls, items) { return `<section class="section ${cls}"><h3>${title}</h3><ul>${items.map((x)=>`<li>${escapeHtml(x)}</li>`).join('')}</ul></section>`; }
   function chipSection(title, cls, items) { return `<section class="section ${cls}"><h3>${title}</h3><div class="chips">${items.map((x)=>`<button class="chip ${cls==='counter'?'counter':''}" data-name="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div></section>`; }
   function escapeHtml(value) { const d=document.createElement('div'); d.textContent=value; return d.innerHTML; }
+  const rankingDefinitions = {
+    synergies: { label:'Synergies', title:'Most good-pair connections', description:'Counts every unique recommended pairing shown for the faction.', value:(faction)=>faction.partners.length },
+    counteredBy: { label:'Countered by', title:'Most counters against them', description:'Counts factions listed as counters to this faction.', value:(faction)=>faction.counters.length },
+    countersOthers: { label:'They counter', title:'Most card factions they counter', description:'Counts detailed card factions that list this faction as a counter.', value:(faction)=>factionsCountered.get(faction.name) || 0 },
+  };
+  function showRankings(mode = rankingMode) {
+    rankingMode = mode;
+    selected = null;
+    clearSelection();
+    rankingsButton.classList.add('active');
+    const definition = rankingDefinitions[mode];
+    const ranked = [...sources].sort((a,b)=>definition.value(b)-definition.value(a) || a.name.localeCompare(b.name));
+    details.innerHTML = `<div class="rankings-body"><span class="detail-number">FACTION OVERVIEW</span><h2>${definition.title}</h2><p class="rankings-intro">${definition.description}</p><div class="ranking-tabs">${Object.entries(rankingDefinitions).map(([key,item])=>`<button class="ranking-tab ${key===mode?'active':''}" data-ranking="${key}" type="button">${item.label}</button>`).join('')}</div><ol class="ranking-list">${ranked.map((faction,index)=>`<li><button class="ranking-row" data-name="${escapeHtml(faction.name)}" type="button"><span class="ranking-position">${index+1}</span><span class="ranking-name">${escapeHtml(faction.name)}</span><span class="ranking-count">${definition.value(faction)}</span></button></li>`).join('')}</ol></div>`;
+    details.querySelectorAll('.ranking-tab').forEach((button)=>button.addEventListener('click',()=>showRankings(button.dataset.ranking)));
+    details.querySelectorAll('.ranking-row').forEach((button)=>button.addEventListener('click',()=>selectNode(nodeById.get(button.dataset.name))));
+  }
 
   function point(event) { const rect=svg.getBoundingClientRect(); return { x:(event.clientX-rect.left-transform.x)/transform.k, y:(event.clientY-rect.top-transform.y)/transform.k }; }
   function startNodeDrag(event,node) { event.preventDefault(); event.stopPropagation(); dragged=node; node.el.setPointerCapture(event.pointerId); const move=(e)=>{const p=point(e);node.x=p.x;node.y=p.y;node.vx=node.vy=0;render()}; const up=()=>{dragged=null;node.el.removeEventListener('pointermove',move);node.el.removeEventListener('pointerup',up)}; node.el.addEventListener('pointermove',move);node.el.addEventListener('pointerup',up); }
@@ -133,8 +158,9 @@
     button.setAttribute('aria-pressed', String(visibleEdgeTypes.has(type)));
     applyEdgeFilters();
   }));
+  rankingsButton.addEventListener('click', () => showRankings());
   function applyEdgeFilters() { for (const edge of edges) edge.el.style.display = visibleEdgeTypes.has(edge.type) ? '' : 'none'; }
-  resetButton.addEventListener('click',()=>{transform={x:0,y:0,k:1};search.value='';clearSelection();visibleEdgeTypes.clear();visibleEdgeTypes.add('pair');visibleEdgeTypes.add('counter');for(const button of filterButtons){button.classList.add('active');button.setAttribute('aria-pressed','true')}applyEdgeFilters();render()});
+  resetButton.addEventListener('click',()=>{transform={x:0,y:0,k:1};search.value='';clearSelection();rankingsButton.classList.remove('active');visibleEdgeTypes.clear();visibleEdgeTypes.add('pair');visibleEdgeTypes.add('counter');for(const button of filterButtons){button.classList.add('active');button.setAttribute('aria-pressed','true')}applyEdgeFilters();render()});
   window.addEventListener('resize',render);
   render(); simulate();
 })();

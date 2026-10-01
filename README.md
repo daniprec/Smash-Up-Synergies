@@ -11,6 +11,7 @@ Open `index.html` in a modern browser. It is a static site suitable for GitHub P
 - Search by faction name; an exact match opens that faction.
 - Search suggestions autocomplete faction names.
 - Use the Pairs and Counters buttons to show either relationship type independently.
+- Open Rankings to list card factions by total good-pair connections, counters against them, or card factions they counter.
 - Card factions link to their AEG Smash Up Rulebook page when one exists. Licensed factions without an official page are identified in the detail panel.
 - Smaller gray nodes are factions referenced by a card but not represented by their own image in this folder.
 
@@ -22,4 +23,4 @@ Faction records are kept together in the generated `data.js` dataset instead of 
 
 ## Attribution
 
-The faction strengths, weaknesses, pair recommendations, and counters are credited to the [Use The Fours YouTube channel](https://www.youtube.com/@UseTheFours). Smash Up is a trademark of Alderac Entertainment Group. This independent fan project is not affiliated with or endorsed by AEG.
+The faction strengths, weaknesses, pair recommendations, and counters are sourced from and credited to the [Use The Fours Podcast YouTube channel](https://www.youtube.com/@UseTheFoursPodcast). Smash Up is a trademark of Alderac Entertainment Group. This independent fan project is not affiliated with or endorsed by AEG.
