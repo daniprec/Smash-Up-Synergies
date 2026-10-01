@@ -20,7 +20,7 @@ main { height:calc(100vh - 88px); display:grid; grid-template-columns:minmax(0,1
 .line { width:22px; height:2px; display:inline-block; position:relative; background:#d8dce2; }.line.counter{background:var(--red)}.line.counter::after{content:"";position:absolute;right:-1px;top:-4px;border-left:7px solid var(--red);border-top:4px solid transparent;border-bottom:4px solid transparent}
 .dot { width:9px; height:9px; display:inline-block; border-radius:50%; background:var(--accent); }.dot.reference{background:#667080}
 .hint { position:absolute; left:20px; bottom:15px; color:#7e8794; font-size:11px; pointer-events:none; }
-.credit{position:absolute;right:20px;bottom:12px;margin:0;color:#737c89;font-size:11px}.credit a{color:#aeb7c4}.credit a:hover{color:var(--accent)}
+.credit{position:absolute;right:20px;bottom:12px;max-width:610px;color:#737c89;font-size:11px;text-align:right}.credit p{margin:3px 0}.credit a{color:#aeb7c4}.credit a:hover{color:var(--accent)}
 aside { overflow:auto; border-left:1px solid #2a3039; background:#0e1217; }
 .empty-state { display:grid; place-items:center; align-content:center; min-height:100%; padding:50px; text-align:center; color:var(--muted); }.empty-state h2{color:var(--ink);margin:10px 0}.empty-state p{line-height:1.6}.empty-icon{font-size:32px;color:var(--accent)}
 .detail-body { position:relative; padding:28px 24px 32px; }.detail-number{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.13em}.detail-body h2{margin:5px 0 22px;font:700 30px/1.05 Georgia,serif}
