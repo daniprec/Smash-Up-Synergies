@@ -5,16 +5,18 @@
   const factionOptions = document.querySelector('#faction-options');
   const filterButtons = [...document.querySelectorAll('.filter')];
   const rankingsButton = document.querySelector('#rankings');
+  const artworkButton = document.querySelector('#artwork');
   const resetButton = document.querySelector('#reset');
   const NS = 'http://www.w3.org/2000/svg';
   const width = () => svg.clientWidth;
   const height = () => svg.clientHeight;
   const sources = window.FACTION_DATA;
-  const byName = new Map(sources.map((f) => [f.name, f]));
-  const referencedNames = new Set(sources.flatMap((f) => [...f.partners, ...f.counters]).filter((name) => !byName.has(name)));
+  const references = window.FACTION_REFERENCE_DATA || [];
+  const allFactions = [...sources, ...references];
+  const byName = new Map(allFactions.map((f) => [f.name, f]));
   const nodes = [
     ...sources.map((f, i) => ({ id:f.name, faction:f, source:true, x:width()/2+Math.cos(i)*120, y:height()/2+Math.sin(i)*120, vx:0, vy:0 })),
-    ...[...referencedNames].sort().map((name, i) => ({ id:name, source:false, x:width()/2+Math.cos(i*.9)*280, y:height()/2+Math.sin(i*.9)*280, vx:0, vy:0 })),
+    ...references.map((f, i) => ({ id:f.name, faction:f, source:false, x:width()/2+Math.cos(i*.9)*280, y:height()/2+Math.sin(i*.9)*280, vx:0, vy:0 })),
   ];
   const nodeById = new Map(nodes.map((n) => [n.id, n]));
   factionOptions.innerHTML = nodes.map((node) => `<option value="${node.id}"></option>`).join('');
@@ -65,7 +67,7 @@
     group.classList.add('node', node.source ? 'source' : 'reference');
     const circle = document.createElementNS(NS, 'circle'); circle.setAttribute('r', node.source ? 9 : 5.5);
     const label = document.createElementNS(NS, 'text'); label.setAttribute('x', node.source ? 13 : 9); label.setAttribute('y', 4); label.textContent = node.id;
-    group.append(circle, label); node.el = group; nodeLayer.append(group);
+    group.append(circle, label); node.el = group; node.circle = circle; nodeLayer.append(group);
     group.addEventListener('pointerdown', (event) => startNodeDrag(event, node));
     group.addEventListener('click', (event) => { event.stopPropagation(); selectNode(node); });
   }
@@ -73,6 +75,8 @@
   let transform = { x:0, y:0, k:1 };
   let selected = null;
   let rankingMode = 'synergies';
+  let artworkEnabled = false;
+  let artworkReady = false;
   let dragged = null;
   let pan = null;
   const connected = (node) => new Set(edges.filter((e) => e.source===node || e.target===node).flatMap((e) => [e.source,e.target]));
@@ -111,19 +115,17 @@
     const near = connected(node); near.add(node);
     for (const n of nodes) { n.el.classList.toggle('selected', n===node); n.el.classList.toggle('dim', !near.has(n)); }
     for (const e of edges) { const active=e.source===node||e.target===node; e.el.classList.toggle('active',active); e.el.classList.toggle('dim',!active); }
-    if (!node.source) {
-      details.innerHTML = `<div class="empty-state"><span class="empty-icon">◇</span><h2>${escapeHtml(node.id)}</h2><p>This faction is referenced by the card set, but does not have its own source image in this folder.</p></div>`;
-      return;
-    }
     const f=node.faction;
     const officialPage = f.officialUrl
       ? `<a class="official-link" href="${f.officialUrl}" target="_blank" rel="noopener noreferrer">See official page ↗</a>`
       : '<div class="official-link unavailable">No official page available</div>';
-    details.innerHTML = `<div class="detail-body"><span class="detail-number">FACTION #${f.number}</span><h2>${escapeHtml(f.name)}</h2>${officialPage}${listSection('Strengths','strength',f.strengths)}${listSection('Weaknesses','weakness',f.weaknesses)}${chipSection('Good pairs','partner',f.partners)}${chipSection('Countered by','counter',f.counters)}</div>`;
+    const hero = f.imageUrl ? `<img class="faction-cover" src="${f.imageUrl}" alt="${escapeHtml(f.name)} cover artwork" loading="lazy">` : '';
+    const number = f.number ? `FACTION #${f.number}` : 'REFERENCED FACTION';
+    details.innerHTML = `${hero}<div class="detail-body"><span class="detail-number">${number}</span><h2>${escapeHtml(f.name)}</h2>${officialPage}${listSection('Strengths','strength',f.strengths)}${listSection('Weaknesses','weakness',f.weaknesses)}${chipSection('Good pairs','partner',f.partners)}${chipSection('Countered by','counter',f.counters)}${chipSection('Counter of','counter',f.counterTargets || [], 'Nothing')}<p class="detail-credit">Based on the analysis done in Use The Fours. <a href="https://www.youtube.com/@UseTheFoursPodcast" target="_blank" rel="noopener noreferrer">Link here!</a></p></div>`;
     details.querySelectorAll('.chip').forEach((chip) => chip.addEventListener('click', () => selectNode(nodeById.get(chip.dataset.name))));
   }
-  function listSection(title, cls, items) { return `<section class="section ${cls}"><h3>${title}</h3><ul>${items.map((x)=>`<li>${escapeHtml(x)}</li>`).join('')}</ul></section>`; }
-  function chipSection(title, cls, items) { return `<section class="section ${cls}"><h3>${title}</h3><div class="chips">${items.map((x)=>`<button class="chip ${cls==='counter'?'counter':''}" data-name="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div></section>`; }
+  function listSection(title, cls, items) { return `<section class="section ${cls}"><h3>${title}</h3>${items.length ? `<ul>${items.map((x)=>`<li>${escapeHtml(x)}</li>`).join('')}</ul>` : '<p class="empty-copy">—</p>'}</section>`; }
+  function chipSection(title, cls, items, emptyLabel = '—') { return `<section class="section ${cls}"><h3>${title}</h3>${items.length ? `<div class="chips">${items.map((x)=>`<button class="chip ${cls==='counter'?'counter':''}" data-name="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div>` : `<p class="empty-copy">${emptyLabel}</p>`}</section>`; }
   function escapeHtml(value) { const d=document.createElement('div'); d.textContent=value; return d.innerHTML; }
   const rankingDefinitions = {
     synergies: { label:'Synergies', title:'Most good-pair connections', description:'Counts every unique recommended pairing shown for the faction.', value:(faction)=>faction.partners.length },
@@ -159,6 +161,26 @@
     applyEdgeFilters();
   }));
   rankingsButton.addEventListener('click', () => showRankings());
+  function ensureArtwork() {
+    if (artworkReady) return;
+    for (const [index, node] of nodes.entries()) {
+      if (!node.faction.imageUrl) continue;
+      const pattern = document.createElementNS(NS, 'pattern');
+      pattern.setAttribute('id', `art-${index}`); pattern.setAttribute('patternUnits', 'userSpaceOnUse');
+      pattern.setAttribute('x', '-12'); pattern.setAttribute('y', '-12'); pattern.setAttribute('width', '24'); pattern.setAttribute('height', '24');
+      const image = document.createElementNS(NS, 'image'); image.setAttribute('href', node.faction.imageUrl);
+      image.setAttribute('x', '-12'); image.setAttribute('y', '-12'); image.setAttribute('width', '24'); image.setAttribute('height', '24'); image.setAttribute('preserveAspectRatio', 'xMidYMid slice');
+      pattern.append(image); defs.append(pattern); node.artworkFill = `url(#art-${index})`;
+    }
+    artworkReady = true;
+  }
+  artworkButton.addEventListener('click', () => {
+    artworkEnabled = !artworkEnabled;
+    if (artworkEnabled) ensureArtwork();
+    for (const node of nodes) node.circle.style.fill = artworkEnabled && node.artworkFill ? node.artworkFill : '';
+    artworkButton.classList.toggle('active', artworkEnabled);
+    artworkButton.setAttribute('aria-pressed', String(artworkEnabled));
+  });
   function applyEdgeFilters() { for (const edge of edges) edge.el.style.display = visibleEdgeTypes.has(edge.type) ? '' : 'none'; }
   resetButton.addEventListener('click',()=>{transform={x:0,y:0,k:1};search.value='';clearSelection();rankingsButton.classList.remove('active');visibleEdgeTypes.clear();visibleEdgeTypes.add('pair');visibleEdgeTypes.add('counter');for(const button of filterButtons){button.classList.add('active');button.setAttribute('aria-pressed','true')}applyEdgeFilters();render()});
   window.addEventListener('resize',render);

@@ -34,7 +34,9 @@ window.FACTION_DATA = [
       "The Nightmare Before Christmas",
       "Tricksters",
       "Vikings"
-    ]
+    ],
+    "imageUrl": null,
+    "counterTargets": []
   },
   {
     "id": "anansi_tales",
@@ -66,6 +68,11 @@ window.FACTION_DATA = [
       "Russian Fairy Tales",
       "Super Spies",
       "The Nightmare Before Christmas"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/dd/SU1061_CoverPhoto_Anansi.png",
+    "counterTargets": [
+      "Elder Things",
+      "Vikings"
     ]
   },
   {
@@ -99,6 +106,10 @@ window.FACTION_DATA = [
       "Super Spies",
       "Time Travelers",
       "Tricksters"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/f/fd/SU1052_CoverPhoto_AncientEgyptians.png",
+    "counterTargets": [
+      "Elder Things"
     ]
   },
   {
@@ -135,7 +146,9 @@ window.FACTION_DATA = [
       "Kaiju",
       "Steampunks",
       "Truckers"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/4e/SU1062_CoverPhoto_AncientIncas.png",
+    "counterTargets": []
   },
   {
     "id": "astroknights",
@@ -169,7 +182,9 @@ window.FACTION_DATA = [
       "Super Spies",
       "Superheroes",
       "Teddy Bears"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/ef/SU1034_CoverPhoto_AstroKnights.png",
+    "counterTargets": []
   },
   {
     "id": "bear_cavalry",
@@ -204,6 +219,18 @@ window.FACTION_DATA = [
       "Russian Fairy Tales",
       "Super Spies",
       "Teddy Bears"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/78/SU1009_CoverPhoto_BearCavalry.png",
+    "counterTargets": [
+      "Changerbots",
+      "Clowns",
+      "Kitty Cats",
+      "Magical Girls",
+      "Mounties",
+      "Sheep",
+      "Star Roamers",
+      "Tricksters",
+      "Ultimates"
     ]
   },
   {
@@ -240,7 +267,9 @@ window.FACTION_DATA = [
       "Ninjas",
       "Princesses",
       "Slashers"
-    ]
+    ],
+    "imageUrl": null,
+    "counterTargets": []
   },
   {
     "id": "changerbots",
@@ -274,7 +303,9 @@ window.FACTION_DATA = [
       "Polynesian Voyagers",
       "Sheep",
       "Teddy Bears"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/1e/SU1035_CoverPhoto_ChangerBots.png",
+    "counterTargets": []
   },
   {
     "id": "clerics",
@@ -308,7 +339,9 @@ window.FACTION_DATA = [
       "Elves",
       "Magical Girls",
       "Polynesian Voyagers"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/3/36/SU1086_CoverPhoto_Munchkin_Clerics.png",
+    "counterTargets": []
   },
   {
     "id": "clowns",
@@ -344,7 +377,9 @@ window.FACTION_DATA = [
       "Teddy Bears",
       "The Nightmare Before Christmas",
       "Vigilantes"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/20/SU1082_CoverPhoto_Clowns.png",
+    "counterTargets": []
   },
   {
     "id": "cowboys",
@@ -374,7 +409,9 @@ window.FACTION_DATA = [
       "Cyborg Apes",
       "Kree",
       "Ninjas"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/21/SU1053_CoverPhoto_Cowboys.png",
+    "counterTargets": []
   },
   {
     "id": "cyborg_apes",
@@ -408,6 +445,10 @@ window.FACTION_DATA = [
       "The Nightmare Before Christmas",
       "Thieves",
       "Vikings"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/d3/SU1017_CoverPhoto_CyborgApes.png",
+    "counterTargets": [
+      "Cowboys"
     ]
   },
   {
@@ -450,7 +491,9 @@ window.FACTION_DATA = [
       "Super Spies",
       "Teddy Bears",
       "Tricksters"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/8a/SU1002_CoverPhoto_Dinosaurs.png",
+    "counterTargets": []
   },
   {
     "id": "disco_dancers",
@@ -482,7 +525,9 @@ window.FACTION_DATA = [
       "Ninjas",
       "Orcs",
       "Super Spies"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e7/SU1046_CoverPhoto_DiscoDancers.png",
+    "counterTargets": []
   },
   {
     "id": "dwarves",
@@ -511,7 +556,9 @@ window.FACTION_DATA = [
       "Russian Fairy Tales",
       "Thieves",
       "Vigilantes"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/a/a0/SU1087_CoverPhoto_Munchkin_Dwarves.png",
+    "counterTargets": []
   },
   {
     "id": "elder_things",
@@ -551,6 +598,12 @@ window.FACTION_DATA = [
       "Miskatonic University",
       "Time Travelers",
       "Wizards"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e8/SU1013_CoverPhoto_ElderThings.png",
+    "counterTargets": [
+      "Clerics",
+      "Kree",
+      "Vampires"
     ]
   },
   {
@@ -580,6 +633,10 @@ window.FACTION_DATA = [
     "counters": [
       "Polynesian Voyagers",
       "Sheep"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/bc/SU1038_CoverPhoto_Explorers.png",
+    "counterTargets": [
+      "Giant Ants"
     ]
   },
   {
@@ -615,6 +672,10 @@ window.FACTION_DATA = [
       "The Nightmare Before Christmas",
       "Tricksters",
       "Truckers"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/5/59/SU1074_CoverPhoto_Extramorphs.png",
+    "counterTargets": [
+      "Anansi Tales"
     ]
   },
   {
@@ -643,6 +704,14 @@ window.FACTION_DATA = [
     ],
     "counters": [
       "Time Travelers"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/d2/SU1025_CoverPhoto_Fairies.png",
+    "counterTargets": [
+      "Ancient Incas",
+      "Cyborg Apes",
+      "Kaiju",
+      "Luchadors",
+      "Steampunks"
     ]
   },
   {
@@ -682,6 +751,11 @@ window.FACTION_DATA = [
       "Kung Fu Fighters",
       "Russian Fairy Tales",
       "Time Travelers"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e9/SU1021_CoverPhoto_GiantAnts.png",
+    "counterTargets": [
+      "Samurai",
+      "Vampires"
     ]
   },
   {
@@ -712,7 +786,9 @@ window.FACTION_DATA = [
       "Ninjas",
       "Teddy Bears",
       "Truckers"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/3/3f/SU1066_CoverPhoto_Goblins.png",
+    "counterTargets": []
   },
   {
     "id": "halflings",
@@ -748,7 +824,9 @@ window.FACTION_DATA = [
       "Princesses",
       "Slashers",
       "Tricksters"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/1b/SU1089_CoverPhoto_Munchkin_Halflings.png",
+    "counterTargets": []
   },
   {
     "id": "kaiju",
@@ -783,6 +861,11 @@ window.FACTION_DATA = [
       "Time Travelers",
       "Tornados",
       "Truckers"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/21/SU1043_CoverPhoto_Kaiju.png",
+    "counterTargets": [
+      "Ancient Incas",
+      "Steampunks"
     ]
   },
   {
@@ -820,6 +903,11 @@ window.FACTION_DATA = [
       "Ninjas",
       "Superheroes",
       "Teddy Bears"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/dd/SU1026_CoverPhoto_KittyCats.png",
+    "counterTargets": [
+      "Giant Ants",
+      "Warriors"
     ]
   },
   {
@@ -853,6 +941,10 @@ window.FACTION_DATA = [
       "Orcs",
       "Princesses",
       "Super Spies"
+    ],
+    "imageUrl": null,
+    "counterTargets": [
+      "Cowboys"
     ]
   },
   {
@@ -885,6 +977,19 @@ window.FACTION_DATA = [
       "Orcs",
       "Star Roamers",
       "Superheroes"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/8f/SU1056_CoverPhoto_Luchadores.png",
+    "counterTargets": [
+      "Astroknights",
+      "Bear Cavalry",
+      "Beauty and the Beast",
+      "Changerbots",
+      "Dinosaurs",
+      "Mythic Horses",
+      "Pirates",
+      "Princesses",
+      "Shapeshifters",
+      "Vampires"
     ]
   },
   {
@@ -923,6 +1028,11 @@ window.FACTION_DATA = [
       "Orcs",
       "Polynesian Voyagers",
       "Tornados"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/26/SU1044_CoverPhoto_MagicalGirls.png",
+    "counterTargets": [
+      "Clerics",
+      "Vampires"
     ]
   },
   {
@@ -951,7 +1061,9 @@ window.FACTION_DATA = [
       "Ninjas",
       "Sharks",
       "Slashers"
-    ]
+    ],
+    "imageUrl": null,
+    "counterTargets": []
   },
   {
     "id": "mounties",
@@ -981,7 +1093,9 @@ window.FACTION_DATA = [
     "counters": [
       "Bear Cavalry",
       "Polynesian Voyagers"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e7/SU1057_CoverPhoto_Mounties.png",
+    "counterTargets": []
   },
   {
     "id": "musketeers",
@@ -1018,7 +1132,9 @@ window.FACTION_DATA = [
       "Super Spies",
       "Teddy Bears",
       "Tricksters"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/b1/SU1058_CoverPhoto_Musketeers.png",
+    "counterTargets": []
   },
   {
     "id": "mythic_greeks",
@@ -1051,7 +1167,9 @@ window.FACTION_DATA = [
       "Super Spies",
       "Teddy Bears",
       "Tornados"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e0/SU1030_CoverPhoto_MythicGreeks.png",
+    "counterTargets": []
   },
   {
     "id": "mythic_horses",
@@ -1086,7 +1204,9 @@ window.FACTION_DATA = [
       "Ninjas",
       "Princesses",
       "Tricksters"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/b4/SU1027_CoverPhoto_MythicHorses.png",
+    "counterTargets": []
   },
   {
     "id": "penguins",
@@ -1121,7 +1241,9 @@ window.FACTION_DATA = [
       "Mermaids",
       "Princesses",
       "Tricksters"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/cb/SU1060_CoverPhoto_Penguins.png",
+    "counterTargets": []
   },
   {
     "id": "pirates",
@@ -1154,7 +1276,9 @@ window.FACTION_DATA = [
       "Polynesian Voyagers",
       "Sheep",
       "Time Travelers"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/42/SU1004_CoverPhoto_Pirates.png",
+    "counterTargets": []
   },
   {
     "id": "princeses",
@@ -1190,6 +1314,18 @@ window.FACTION_DATA = [
       "Teddy Bears",
       "Time Travelers",
       "Tornados"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/f/f8/SU1028_CoverPhoto_Princesses.png",
+    "counterTargets": [
+      "Ancient Egyptians",
+      "Beauty and the Beast",
+      "Halflings",
+      "Kree",
+      "Musketeers",
+      "Mythic Greeks",
+      "Mythic Horses",
+      "Penguins",
+      "S.H.I.E.L.D."
     ]
   },
   {
@@ -1218,7 +1354,9 @@ window.FACTION_DATA = [
       "Giant Ants",
       "Killer Plants",
       "Kung Fu Fighters"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/d5/SU1054_CoverPhoto_Samurai.png",
+    "counterTargets": []
   },
   {
     "id": "shapeshifters",
@@ -1261,7 +1399,9 @@ window.FACTION_DATA = [
       "Super Spies",
       "Teddy Bears",
       "Tricksters"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/85/SU1018_CoverPhoto_ShapeShifters.png",
+    "counterTargets": []
   },
   {
     "id": "sheep",
@@ -1290,6 +1430,14 @@ window.FACTION_DATA = [
       "Bear Cavalry",
       "Dragons",
       "Polynesian Voyagers"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/cc/SU1069_CoverPhoto_Sheep.png",
+    "counterTargets": [
+      "Changerbots",
+      "Explorers",
+      "Pirates",
+      "Truckers",
+      "Ultimates"
     ]
   },
   {
@@ -1322,7 +1470,9 @@ window.FACTION_DATA = [
       "Tricksters",
       "Warriors",
       "Wraithrustlers"
-    ]
+    ],
+    "imageUrl": null,
+    "counterTargets": []
   },
   {
     "id": "sinister_six",
@@ -1354,6 +1504,10 @@ window.FACTION_DATA = [
       "Ninjas",
       "The Nightmare Before Christmas",
       "Truckers"
+    ],
+    "imageUrl": null,
+    "counterTargets": [
+      "Spider-Verse"
     ]
   },
   {
@@ -1385,7 +1539,9 @@ window.FACTION_DATA = [
       "Russian Fairy Tales",
       "Sinister Six",
       "Tornados"
-    ]
+    ],
+    "imageUrl": null,
+    "counterTargets": []
   },
   {
     "id": "star_roamers",
@@ -1418,6 +1574,10 @@ window.FACTION_DATA = [
     "counters": [
       "Bear Cavalry",
       "Polynesian Voyagers"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/76/SU1037_CoverPhoto_StarRoamers_Folder.png",
+    "counterTargets": [
+      "Luchadors"
     ]
   },
   {
@@ -1455,6 +1615,10 @@ window.FACTION_DATA = [
       "Kaiju",
       "Tornados",
       "Truckers"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/7d/SU1012_CoverPhoto_Steampunks.png",
+    "counterTargets": [
+      "Ancient Incas"
     ]
   },
   {
@@ -1486,6 +1650,10 @@ window.FACTION_DATA = [
     "counters": [
       "Kung Fu Fighters",
       "The Nightmare Before Christmas"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2d/SU1059_CoverPhoto_SumoWrestlers.png",
+    "counterTargets": [
+      "Truckers"
     ]
   },
   {
@@ -1522,6 +1690,22 @@ window.FACTION_DATA = [
       "Kung Fu Fighters",
       "Ninjas",
       "Tricksters"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2c/SU1041_CoverPhoto_TeddyBears.png",
+    "counterTargets": [
+      "Astroknights",
+      "Bear Cavalry",
+      "Changerbots",
+      "Clowns",
+      "Dinosaurs",
+      "Extramorphs",
+      "Goblins",
+      "Kitty Cats",
+      "Musketeers",
+      "Mythic Greeks",
+      "Princesses",
+      "Shapeshifters",
+      "Tricksters"
     ]
   },
   {
@@ -1552,7 +1736,9 @@ window.FACTION_DATA = [
       "Slashers",
       "The Nightmare Before Christmas",
       "Tricksters"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/bf/SU1076_CoverPhoto_Teens_Folder.png",
+    "counterTargets": []
   },
   {
     "id": "tricksters",
@@ -1586,6 +1772,23 @@ window.FACTION_DATA = [
       "Superheroes",
       "Teddy Bears",
       "Truckers"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/1a/SU1006_CoverPhoto_Tricksters.png",
+    "counterTargets": [
+      "Aladdin",
+      "Ancient Egyptians",
+      "Dinosaurs",
+      "Extramorphs",
+      "Halflings",
+      "Musketeers",
+      "Mythic Horses",
+      "Penguins",
+      "S.H.I.E.L.D.",
+      "Shapeshifters",
+      "Teddy Bears",
+      "Teens",
+      "Warriors",
+      "World Champs"
     ]
   },
   {
@@ -1617,6 +1820,16 @@ window.FACTION_DATA = [
       "Sheep",
       "Sumo Wrestlers",
       "Super Spies"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/19/SU1048_CoverPhoto_Truckers.png",
+    "counterTargets": [
+      "Ancient Incas",
+      "Extramorphs",
+      "Goblins",
+      "Kaiju",
+      "Sinister Six",
+      "Steampunks",
+      "Tricksters"
     ]
   },
   {
@@ -1647,7 +1860,9 @@ window.FACTION_DATA = [
       "Bear Cavalry",
       "Polynesian Voyagers",
       "Sheep"
-    ]
+    ],
+    "imageUrl": null,
+    "counterTargets": []
   },
   {
     "id": "vampires",
@@ -1685,7 +1900,9 @@ window.FACTION_DATA = [
       "Kung Fu Fighters",
       "Luchadors",
       "Magical Girls"
-    ]
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/13/SU1023_CoverPhoto_Vampires.png",
+    "counterTargets": []
   },
   {
     "id": "vikings",
@@ -1712,6 +1929,11 @@ window.FACTION_DATA = [
     "counters": [
       "Anansi Tales",
       "Ignobles"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/5/5b/SU1055_CoverPhoto_Vikings.png",
+    "counterTargets": [
+      "Aladdin",
+      "Cyborg Apes"
     ]
   },
   {
@@ -1748,6 +1970,10 @@ window.FACTION_DATA = [
       "Orcs",
       "Tornados",
       "Tricksters"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/6/63/SU1093_CoverPhoto_Munchkin_Warriors.png",
+    "counterTargets": [
+      "S.H.I.E.L.D."
     ]
   },
   {
@@ -1779,6 +2005,1024 @@ window.FACTION_DATA = [
       "Orcs",
       "Super Spies",
       "Tricksters"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/71/SU1071_CoverPhoto_WorldChamps.png",
+    "counterTargets": []
+  }
+];
+window.FACTION_REFERENCE_DATA = [
+  {
+    "id": "action-heroes",
+    "number": null,
+    "name": "Action Heroes",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Action_Heroes",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/c5/SU1072_CoverPhoto_ActionHeroes.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Ultimates"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "adolescent-epic-geckos",
+    "number": null,
+    "name": "Adolescent Epic Geckos",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Adolescent_Epic_Geckos",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/74/SU1077_CoverPhoto_AdolescentEpicGeckos.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Astroknights",
+      "Kitty Cats",
+      "Musketeers",
+      "Samurai"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "aliens",
+    "number": null,
+    "name": "Aliens",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Aliens",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/71/SU1001_CoverPhoto_Aliens.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [],
+    "counters": [],
+    "counterTargets": [
+      "Pirates"
     ]
+  },
+  {
+    "id": "avengers",
+    "number": null,
+    "name": "Avengers",
+    "officialUrl": null,
+    "imageUrl": null,
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Beauty and the Beast",
+      "Explorers",
+      "Halflings",
+      "Penguins",
+      "Sinister Six"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "backtimers",
+    "number": null,
+    "name": "Backtimers",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Backtimers",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/8b/SU1073_CoverPhoto_BacktimersA.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Kree",
+      "Princesses"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "big-hero-6",
+    "number": null,
+    "name": "Big Hero 6",
+    "officialUrl": null,
+    "imageUrl": null,
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Aladdin",
+      "Beauty and the Beast",
+      "Teens"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "dragons",
+    "number": null,
+    "name": "Dragons",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Dragons",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/a/ad/SU1029_CoverPhoto_Dragons.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Ancient Egyptians",
+      "Ancient Incas",
+      "Goblins",
+      "Tricksters",
+      "Warriors"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Ancient Incas",
+      "Beauty and the Beast",
+      "Clowns",
+      "Extramorphs",
+      "Halflings",
+      "Kaiju",
+      "Mythic Horses",
+      "Penguins",
+      "S.H.I.E.L.D.",
+      "Sheep",
+      "Steampunks",
+      "Teddy Bears",
+      "Teens",
+      "World Champs"
+    ]
+  },
+  {
+    "id": "elves",
+    "number": null,
+    "name": "Elves",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Elves",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/47/SU1088_CoverPhoto_Munchkin_Elves.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Cyborg Apes",
+      "Halflings",
+      "Sheep"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Clerics",
+      "Clowns",
+      "Giant Ants",
+      "Spider-Verse"
+    ]
+  },
+  {
+    "id": "frozen",
+    "number": null,
+    "name": "Frozen",
+    "officialUrl": null,
+    "imageUrl": null,
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [],
+    "counters": [],
+    "counterTargets": [
+      "Kitty Cats"
+    ]
+  },
+  {
+    "id": "ghosts",
+    "number": null,
+    "name": "Ghosts",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Ghosts",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e6/SU1010_CoverPhoto_Ghosts.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Beauty and the Beast",
+      "Cowboys",
+      "Goblins",
+      "S.H.I.E.L.D.",
+      "Sumo Wrestlers",
+      "Teens",
+      "Vikings"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "grannies",
+    "number": null,
+    "name": "Grannies",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Grannies",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/c8/SU1039_CoverPhoto_Grannies.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Kaiju",
+      "Masters of Evil",
+      "Mythic Greeks",
+      "Penguins",
+      "Sinister Six",
+      "Ultimates"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Ancient Incas",
+      "Cyborg Apes",
+      "Kitty Cats",
+      "Luchadors",
+      "Steampunks",
+      "Tricksters",
+      "Vampires"
+    ]
+  },
+  {
+    "id": "grimms-fairy-tales",
+    "number": null,
+    "name": "Grimms' Fairy Tales",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Grimms'_Fairy_Tales",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/5/59/SU1063_CoverPhoto_GrimmsFairyTales.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Masters of Evil"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "hydra",
+    "number": null,
+    "name": "Hydra",
+    "officialUrl": null,
+    "imageUrl": null,
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Astroknights",
+      "Giant Ants",
+      "S.H.I.E.L.D.",
+      "Samurai",
+      "Vampires"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Luchadors"
+    ]
+  },
+  {
+    "id": "ignobles",
+    "number": null,
+    "name": "Ignobles",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Ignobles",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/5/5f/SU1036_CoverPhoto_Ignobles.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Anansi Tales",
+      "Disco Dancers",
+      "Shapeshifters"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Vikings"
+    ]
+  },
+  {
+    "id": "innsmouth",
+    "number": null,
+    "name": "Innsmouth",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Innsmouth",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/c6/SU1014_CoverPhoto_Innsmouth.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Kaiju",
+      "Masters of Evil",
+      "Steampunks",
+      "Vikings"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "itty-critters",
+    "number": null,
+    "name": "Itty Critters",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Itty_Critters",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2a/SU1042_CoverPhoto_IttyCritters.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Astroknights",
+      "Changerbots",
+      "Clerics",
+      "Clowns",
+      "Dinosaurs",
+      "Disco Dancers",
+      "Magical Girls",
+      "Shapeshifters",
+      "Vikings",
+      "World Champs"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Aladdin"
+    ]
+  },
+  {
+    "id": "killer-plants",
+    "number": null,
+    "name": "Killer Plants",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Killer_Plants",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/6/63/SU1011_CoverPhoto_KillerPlants.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Aladdin",
+      "Ancient Egyptians",
+      "Ancient Incas",
+      "Bear Cavalry",
+      "Changerbots",
+      "Dinosaurs",
+      "Magical Girls",
+      "Masters of Evil",
+      "Sinister Six",
+      "Steampunks",
+      "Teens",
+      "Truckers",
+      "Warriors"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Halflings",
+      "Mythic Greeks",
+      "Mythic Horses",
+      "Penguins",
+      "Samurai",
+      "Teddy Bears"
+    ]
+  },
+  {
+    "id": "knights-of-the-round-table",
+    "number": null,
+    "name": "Knights of the Round Table",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Knights_of_the_Round_Table",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/de/SU1067_CoverPhoto_KnightsOfTheRoundTable.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Aladdin",
+      "Steampunks"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "kung-fu-fighters",
+    "number": null,
+    "name": "Kung Fu Fighters",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Kung_Fu_Fighters",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/89/SU1047_CoverPhoto_Kung_Fu.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Dinosaurs",
+      "Giant Ants"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Bear Cavalry",
+      "Giant Ants",
+      "Mythic Greeks",
+      "Samurai",
+      "Sumo Wrestlers",
+      "Teddy Bears",
+      "Teens",
+      "Vampires",
+      "Warriors"
+    ]
+  },
+  {
+    "id": "mad-scientists",
+    "number": null,
+    "name": "Mad Scientists",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Mad_Scientists",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/0/01/SU1022_CoverPhoto_MadScientists.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Elder Things",
+      "Kitty Cats",
+      "Kree",
+      "Mythic Greeks"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Anansi Tales"
+    ]
+  },
+  {
+    "id": "mages",
+    "number": null,
+    "name": "Mages",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Mages",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/6/63/SU1090_CoverPhoto_Munchkin_Mages.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Penguins",
+      "Sumo Wrestlers",
+      "Teens"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Beauty and the Beast"
+    ]
+  },
+  {
+    "id": "mega-troopers",
+    "number": null,
+    "name": "Mega Troopers",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Mega_Troopers",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/5/54/SU1045_CoverPhoto_MegaTroopers.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Ancient Egyptians",
+      "Bear Cavalry",
+      "Explorers",
+      "Halflings",
+      "Spider-Verse"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Dinosaurs"
+    ]
+  },
+  {
+    "id": "mermaids",
+    "number": null,
+    "name": "Mermaids",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Mermaids",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/4a/SU1068_CoverPhoto_Mermaids.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Clowns",
+      "Mounties",
+      "Mythic Greeks"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Halflings",
+      "Magical Girls",
+      "Penguins",
+      "Sinister Six"
+    ]
+  },
+  {
+    "id": "minions-of-cthulhu",
+    "number": null,
+    "name": "Minions of Cthulhu",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Minions_of_Cthulhu",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/0/0d/SU1015_CoverPhoto_Cthulhu.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Anansi Tales"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Elder Things"
+    ]
+  },
+  {
+    "id": "miskatonic-university",
+    "number": null,
+    "name": "Miskatonic University",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Miskatonic_University",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/4f/SU1016_CoverPhoto_Miskatonic.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [],
+    "counters": [],
+    "counterTargets": [
+      "Elder Things",
+      "Tricksters"
+    ]
+  },
+  {
+    "id": "mulan",
+    "number": null,
+    "name": "Mulan",
+    "officialUrl": null,
+    "imageUrl": null,
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Ancient Incas",
+      "S.H.I.E.L.D.",
+      "Vampires"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Dwarves",
+      "Sinister Six"
+    ]
+  },
+  {
+    "id": "ninjas",
+    "number": null,
+    "name": "Ninjas",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Ninjas",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/16/SU1003_CoverPhoto_Ninjas.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [],
+    "counters": [],
+    "counterTargets": [
+      "Ancient Egyptians",
+      "Beauty and the Beast",
+      "Cowboys",
+      "Disco Dancers",
+      "Goblins",
+      "Kitty Cats",
+      "Masters of Evil",
+      "Mythic Horses",
+      "Pirates",
+      "Shapeshifters",
+      "Sinister Six",
+      "Teddy Bears",
+      "Warriors"
+    ]
+  },
+  {
+    "id": "orcs",
+    "number": null,
+    "name": "Orcs",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Orcs",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/ed/SU1091_CoverPhoto_Munchkin_Orcs.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Kitty Cats",
+      "Mounties"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Astroknights",
+      "Dinosaurs",
+      "Disco Dancers",
+      "Dwarves",
+      "Kree",
+      "Luchadors",
+      "Magical Girls",
+      "Musketeers",
+      "Spider-Verse",
+      "Warriors",
+      "World Champs"
+    ]
+  },
+  {
+    "id": "pearl-and-the-images",
+    "number": null,
+    "name": "Pearl and the Images",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Pearl_and_the_Images",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2c/SU1079_CoverPhoto_PearlAndTheImages.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Halflings",
+      "Pirates",
+      "Sheep",
+      "Teddy Bears"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "polynesian-voyagers",
+    "number": null,
+    "name": "Polynesian Voyagers",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Polynesian_Voyagers",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/0/0e/SU1064_CoverPhoto_PolynesianWarriors.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Explorers",
+      "Giant Ants",
+      "Mounties"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Bear Cavalry",
+      "Changerbots",
+      "Clerics",
+      "Explorers",
+      "Magical Girls",
+      "Mounties",
+      "Pirates",
+      "Sheep",
+      "Star Roamers",
+      "Truckers",
+      "Ultimates"
+    ]
+  },
+  {
+    "id": "rock-stars",
+    "number": null,
+    "name": "Rock Stars",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Rock_Stars",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2c/SU1040_CoverPhoto_RockStars.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Magical Girls"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "rulers-of-the-cosmos",
+    "number": null,
+    "name": "Rulers of the Cosmos",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Rulers_of_the_Cosmos",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/a/a9/SU1080_CoverPhoto_RulersOfTheCosmos.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Cyborg Apes",
+      "Shapeshifters",
+      "Vampires"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "russian-fairy-tales",
+    "number": null,
+    "name": "Russian Fairy Tales",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Russian_Fairy_Tales",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/74/SU1065_CoverPhoto_RussianFairyTales.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Extramorphs",
+      "Magical Girls",
+      "Pirates",
+      "Princesses",
+      "Star Roamers"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Anansi Tales",
+      "Bear Cavalry",
+      "Dwarves",
+      "Giant Ants",
+      "Spider-Verse"
+    ]
+  },
+  {
+    "id": "sharks",
+    "number": null,
+    "name": "Sharks",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Sharks",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/26/SU1031_CoverPhoto_Sharks.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Cowboys",
+      "Elder Things",
+      "Luchadors",
+      "Warriors"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Masters of Evil",
+      "Shapeshifters"
+    ]
+  },
+  {
+    "id": "skeletons",
+    "number": null,
+    "name": "Skeletons",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Skeletons",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/a/a9/SU1070_CoverPhoto_Skeletons.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Kaiju"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "slashers",
+    "number": null,
+    "name": "Slashers",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Slashers",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/4b/SU1081_CoverPhoto_Slashers_Folder.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Luchadors"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Beauty and the Beast",
+      "Halflings",
+      "Masters of Evil",
+      "Teens"
+    ]
+  },
+  {
+    "id": "smash-up-all-stars",
+    "number": null,
+    "name": "Smash Up All Stars",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Smash_Up_All_Stars",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e6/SU1051_CoverPhoto_SmashUpAllStars.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Clowns",
+      "Goblins",
+      "World Champs"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "super-spies",
+    "number": null,
+    "name": "Super Spies",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Super_Spies",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/73/SU1019_CoverPhoto_SuperSpies.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Elder Things",
+      "Penguins",
+      "Spider-Verse"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Aladdin",
+      "Anansi Tales",
+      "Ancient Egyptians",
+      "Astroknights",
+      "Bear Cavalry",
+      "Dinosaurs",
+      "Disco Dancers",
+      "Kaiju",
+      "Kree",
+      "Musketeers",
+      "Mythic Greeks",
+      "Princesses",
+      "Shapeshifters",
+      "Truckers",
+      "World Champs"
+    ]
+  },
+  {
+    "id": "superheroes",
+    "number": null,
+    "name": "Superheroes",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Superheroes",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/14/SU1032_CoverPhoto_Superheroes.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Anansi Tales",
+      "Ancient Egyptians",
+      "Explorers",
+      "Extramorphs",
+      "Masters of Evil",
+      "Mythic Greeks",
+      "Princesses",
+      "Samurai",
+      "Shapeshifters",
+      "Sheep",
+      "Star Roamers",
+      "Teddy Bears",
+      "Truckers",
+      "Vampires"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Astroknights",
+      "Kitty Cats",
+      "Luchadors",
+      "Princesses",
+      "Tricksters"
+    ]
+  },
+  {
+    "id": "the-lion-king",
+    "number": null,
+    "name": "The Lion King",
+    "officialUrl": null,
+    "imageUrl": null,
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Astroknights",
+      "Cowboys",
+      "Dwarves",
+      "Masters of Evil"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "the-nightmare-before-christmas",
+    "number": null,
+    "name": "The Nightmare Before Christmas",
+    "officialUrl": null,
+    "imageUrl": null,
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Cyborg Apes",
+      "Fairies",
+      "Kitty Cats",
+      "Kree",
+      "Luchadors",
+      "Warriors"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Aladdin",
+      "Anansi Tales",
+      "Clowns",
+      "Cyborg Apes",
+      "Extramorphs",
+      "Sinister Six",
+      "Sumo Wrestlers",
+      "Teens"
+    ]
+  },
+  {
+    "id": "thieves",
+    "number": null,
+    "name": "Thieves",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Thieves",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/cc/SU1092_CoverPhoto_Munchkin_Thieves.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Anansi Tales",
+      "Star Roamers",
+      "Vikings"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Cyborg Apes",
+      "Dwarves"
+    ]
+  },
+  {
+    "id": "time-travelers",
+    "number": null,
+    "name": "Time Travelers",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Time_Travelers",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/c2/SU1020_CoverPhoto_TimeTravelers.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Anansi Tales",
+      "Beauty and the Beast",
+      "Clowns",
+      "Dwarves",
+      "Teens",
+      "Vikings",
+      "World Champs"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Ancient Egyptians",
+      "Elder Things",
+      "Fairies",
+      "Giant Ants",
+      "Kaiju",
+      "Pirates",
+      "Princesses"
+    ]
+  },
+  {
+    "id": "tornados",
+    "number": null,
+    "name": "Tornados",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Tornados",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/b4/SU1033_CoverPhoto_Tornados.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Bear Cavalry",
+      "Disco Dancers",
+      "Luchadors",
+      "Mounties",
+      "Sheep",
+      "Spider-Verse",
+      "Ultimates",
+      "Warriors"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Kaiju",
+      "Magical Girls",
+      "Mythic Greeks",
+      "Princesses",
+      "Spider-Verse",
+      "Steampunks",
+      "Warriors"
+    ]
+  },
+  {
+    "id": "vigilantes",
+    "number": null,
+    "name": "Vigilantes",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Vigilantes",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/ee/SU1049_CoverPhoto_Vigilantes.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Clerics",
+      "Extramorphs",
+      "Giant Ants",
+      "Shapeshifters"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Clowns",
+      "Dwarves"
+    ]
+  },
+  {
+    "id": "werewolves",
+    "number": null,
+    "name": "Werewolves",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Werewolves",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/a/a1/SU1024_CoverPhoto_Werewolves.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Changerbots",
+      "Sinister Six",
+      "Ultimates"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "wizards",
+    "number": null,
+    "name": "Wizards",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Wizards",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2f/SU1007_CoverPhoto_Wizards.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Cyborg Apes",
+      "Dwarves",
+      "Mythic Horses",
+      "Teens",
+      "World Champs"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Elder Things"
+    ]
+  },
+  {
+    "id": "wraithrustlers",
+    "number": null,
+    "name": "Wraithrustlers",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Wraithrustlers",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/f/f3/SU1075_CoverPhoto_Wraithrustlers.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Mythic Horses",
+      "Sinister Six",
+      "World Champs"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "S.H.I.E.L.D."
+    ]
+  },
+  {
+    "id": "wreck-it-ralph",
+    "number": null,
+    "name": "Wreck-It Ralph",
+    "officialUrl": null,
+    "imageUrl": null,
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Teddy Bears"
+    ],
+    "counters": [],
+    "counterTargets": []
+  },
+  {
+    "id": "zombies",
+    "number": null,
+    "name": "Zombies",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Zombies",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/12/SU1008_CoverPhoto_Zombies.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Dinosaurs",
+      "Truckers"
+    ],
+    "counters": [],
+    "counterTargets": []
   }
 ];
