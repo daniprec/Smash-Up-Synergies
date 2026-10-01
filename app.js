@@ -1,0 +1,140 @@
+(() => {
+  const svg = document.querySelector('#graph');
+  const details = document.querySelector('#details');
+  const search = document.querySelector('#search');
+  const factionOptions = document.querySelector('#faction-options');
+  const filterButtons = [...document.querySelectorAll('.filter')];
+  const resetButton = document.querySelector('#reset');
+  const NS = 'http://www.w3.org/2000/svg';
+  const width = () => svg.clientWidth;
+  const height = () => svg.clientHeight;
+  const sources = window.FACTION_DATA;
+  const byName = new Map(sources.map((f) => [f.name, f]));
+  const referencedNames = new Set(sources.flatMap((f) => [...f.partners, ...f.counters]).filter((name) => !byName.has(name)));
+  const nodes = [
+    ...sources.map((f, i) => ({ id:f.name, faction:f, source:true, x:width()/2+Math.cos(i)*120, y:height()/2+Math.sin(i)*120, vx:0, vy:0 })),
+    ...[...referencedNames].sort().map((name, i) => ({ id:name, source:false, x:width()/2+Math.cos(i*.9)*280, y:height()/2+Math.sin(i*.9)*280, vx:0, vy:0 })),
+  ];
+  const nodeById = new Map(nodes.map((n) => [n.id, n]));
+  factionOptions.innerHTML = nodes.map((node) => `<option value="${node.id}"></option>`).join('');
+  const visibleEdgeTypes = new Set(['pair', 'counter']);
+  const edgeKey = (a,b,type) => type === 'pair' ? `${type}:${[a,b].sort().join('|')}` : `${type}:${a}>${b}`;
+  const seen = new Set();
+  const edges = [];
+  for (const faction of sources) {
+    for (const [type, names] of [['pair', faction.partners], ['counter', faction.counters]]) {
+      for (const target of names) {
+        if (!nodeById.has(target) || target === faction.name) continue;
+        const key = edgeKey(faction.name, target, type);
+        if (!seen.has(key)) {
+          seen.add(key);
+          // A card says it is "countered by" the named faction, so the arrow
+          // runs from the counter to the countered faction.
+          edges.push(type === 'counter'
+            ? { source:nodeById.get(target), target:nodeById.get(faction.name), type }
+            : { source:nodeById.get(faction.name), target:nodeById.get(target), type });
+        }
+      }
+    }
+  }
+
+  const defs = document.createElementNS(NS, 'defs');
+  const marker = document.createElementNS(NS, 'marker');
+  marker.setAttribute('id', 'counter-arrow'); marker.setAttribute('viewBox', '0 -5 10 10');
+  marker.setAttribute('refX', '18'); marker.setAttribute('refY', '0'); marker.setAttribute('markerWidth', '7'); marker.setAttribute('markerHeight', '7'); marker.setAttribute('orient', 'auto');
+  const arrowPath = document.createElementNS(NS, 'path'); arrowPath.setAttribute('d', 'M0,-5L10,0L0,5'); arrowPath.setAttribute('fill', '#f05252');
+  marker.append(arrowPath); defs.append(marker); svg.append(defs);
+  const viewport = document.createElementNS(NS, 'g');
+  const edgeLayer = document.createElementNS(NS, 'g');
+  const nodeLayer = document.createElementNS(NS, 'g');
+  viewport.append(edgeLayer, nodeLayer); svg.append(viewport);
+  for (const edge of edges) {
+    const line = document.createElementNS(NS, 'line');
+    line.classList.add('edge'); if (edge.type === 'counter') { line.classList.add('counter'); line.setAttribute('marker-end', 'url(#counter-arrow)'); }
+    edge.el = line; edgeLayer.append(line);
+  }
+  for (const node of nodes) {
+    const group = document.createElementNS(NS, 'g');
+    group.classList.add('node', node.source ? 'source' : 'reference');
+    const circle = document.createElementNS(NS, 'circle'); circle.setAttribute('r', node.source ? 9 : 5.5);
+    const label = document.createElementNS(NS, 'text'); label.setAttribute('x', node.source ? 13 : 9); label.setAttribute('y', 4); label.textContent = node.id;
+    group.append(circle, label); node.el = group; nodeLayer.append(group);
+    group.addEventListener('pointerdown', (event) => startNodeDrag(event, node));
+    group.addEventListener('click', (event) => { event.stopPropagation(); selectNode(node); });
+  }
+
+  let transform = { x:0, y:0, k:1 };
+  let selected = null;
+  let dragged = null;
+  let pan = null;
+  const connected = (node) => new Set(edges.filter((e) => e.source===node || e.target===node).flatMap((e) => [e.source,e.target]));
+  function render() {
+    viewport.setAttribute('transform', `translate(${transform.x} ${transform.y}) scale(${transform.k})`);
+    for (const edge of edges) {
+      edge.el.setAttribute('x1', edge.source.x); edge.el.setAttribute('y1', edge.source.y);
+      edge.el.setAttribute('x2', edge.target.x); edge.el.setAttribute('y2', edge.target.y);
+    }
+    for (const node of nodes) node.el.setAttribute('transform', `translate(${node.x} ${node.y})`);
+  }
+
+  let ticks = 0;
+  function simulate() {
+    if (ticks++ < 620) {
+      const charge = nodes.length > 120 ? 1300 : 1700;
+      for (let i=0;i<nodes.length;i++) for (let j=i+1;j<nodes.length;j++) {
+        const a=nodes[i], b=nodes[j], dx=a.x-b.x, dy=a.y-b.y, d2=Math.max(90,dx*dx+dy*dy), f=charge/d2;
+        a.vx += dx*f*.015; a.vy += dy*f*.015; b.vx -= dx*f*.015; b.vy -= dy*f*.015;
+      }
+      for (const e of edges) {
+        const dx=e.target.x-e.source.x, dy=e.target.y-e.source.y, d=Math.max(1,Math.hypot(dx,dy)), desired=e.type==='pair'?86:112, f=(d-desired)*.0025;
+        e.source.vx += dx/d*f; e.source.vy += dy/d*f; e.target.vx -= dx/d*f; e.target.vy -= dy/d*f;
+      }
+      const cx=width()/2, cy=height()/2;
+      for (const n of nodes) if (n!==dragged) {
+        n.vx+=(cx-n.x)*.00035; n.vy+=(cy-n.y)*.00035; n.vx*=.88; n.vy*=.88; n.x+=n.vx; n.y+=n.vy;
+      }
+      render(); requestAnimationFrame(simulate);
+    }
+  }
+
+  function selectNode(node) {
+    selected = node;
+    const near = connected(node); near.add(node);
+    for (const n of nodes) { n.el.classList.toggle('selected', n===node); n.el.classList.toggle('dim', !near.has(n)); }
+    for (const e of edges) { const active=e.source===node||e.target===node; e.el.classList.toggle('active',active); e.el.classList.toggle('dim',!active); }
+    if (!node.source) {
+      details.innerHTML = `<div class="empty-state"><span class="empty-icon">◇</span><h2>${escapeHtml(node.id)}</h2><p>This faction is referenced by the card set, but does not have its own source image in this folder.</p></div>`;
+      return;
+    }
+    const f=node.faction;
+    const officialPage = f.officialUrl
+      ? `<a class="official-link" href="${f.officialUrl}" target="_blank" rel="noopener noreferrer">See official page ↗</a>`
+      : '<div class="official-link unavailable">No official page available</div>';
+    details.innerHTML = `<div class="detail-body"><span class="detail-number">FACTION #${f.number}</span><h2>${escapeHtml(f.name)}</h2>${officialPage}${listSection('Strengths','strength',f.strengths)}${listSection('Weaknesses','weakness',f.weaknesses)}${chipSection('Good pairs','partner',f.partners)}${chipSection('Countered by','counter',f.counters)}</div>`;
+    details.querySelectorAll('.chip').forEach((chip) => chip.addEventListener('click', () => selectNode(nodeById.get(chip.dataset.name))));
+  }
+  function listSection(title, cls, items) { return `<section class="section ${cls}"><h3>${title}</h3><ul>${items.map((x)=>`<li>${escapeHtml(x)}</li>`).join('')}</ul></section>`; }
+  function chipSection(title, cls, items) { return `<section class="section ${cls}"><h3>${title}</h3><div class="chips">${items.map((x)=>`<button class="chip ${cls==='counter'?'counter':''}" data-name="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div></section>`; }
+  function escapeHtml(value) { const d=document.createElement('div'); d.textContent=value; return d.innerHTML; }
+
+  function point(event) { const rect=svg.getBoundingClientRect(); return { x:(event.clientX-rect.left-transform.x)/transform.k, y:(event.clientY-rect.top-transform.y)/transform.k }; }
+  function startNodeDrag(event,node) { event.preventDefault(); event.stopPropagation(); dragged=node; node.el.setPointerCapture(event.pointerId); const move=(e)=>{const p=point(e);node.x=p.x;node.y=p.y;node.vx=node.vy=0;render()}; const up=()=>{dragged=null;node.el.removeEventListener('pointermove',move);node.el.removeEventListener('pointerup',up)}; node.el.addEventListener('pointermove',move);node.el.addEventListener('pointerup',up); }
+  svg.addEventListener('pointerdown',(e)=>{ if(e.target.closest?.('.node'))return; pan={x:e.clientX,y:e.clientY,tx:transform.x,ty:transform.y}; svg.setPointerCapture(e.pointerId); });
+  svg.addEventListener('pointermove',(e)=>{if(pan){transform.x=pan.tx+e.clientX-pan.x;transform.y=pan.ty+e.clientY-pan.y;render()}});
+  svg.addEventListener('pointerup',()=>pan=null);
+  svg.addEventListener('wheel',(e)=>{e.preventDefault();const rect=svg.getBoundingClientRect(),mx=e.clientX-rect.left,my=e.clientY-rect.top,old=transform.k,next=Math.max(.25,Math.min(3,old*Math.exp(-e.deltaY*.001)));transform.x=mx-(mx-transform.x)*next/old;transform.y=my-(my-transform.y)*next/old;transform.k=next;render()},{passive:false});
+  svg.addEventListener('click',()=>clearSelection());
+  function clearSelection(){selected=null;for(const n of nodes)n.el.classList.remove('selected','dim');for(const e of edges)e.el.classList.remove('active','dim');}
+  search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();for(const n of nodes)n.el.classList.toggle('dim',q&&!n.id.toLowerCase().includes(q));const exact=nodes.find(n=>n.id.toLowerCase()===q);if(exact)selectNode(exact)});
+  filterButtons.forEach((button) => button.addEventListener('click', () => {
+    const type = button.dataset.edgeType;
+    if (visibleEdgeTypes.has(type)) visibleEdgeTypes.delete(type); else visibleEdgeTypes.add(type);
+    button.classList.toggle('active', visibleEdgeTypes.has(type));
+    button.setAttribute('aria-pressed', String(visibleEdgeTypes.has(type)));
+    applyEdgeFilters();
+  }));
+  function applyEdgeFilters() { for (const edge of edges) edge.el.style.display = visibleEdgeTypes.has(edge.type) ? '' : 'none'; }
+  resetButton.addEventListener('click',()=>{transform={x:0,y:0,k:1};search.value='';clearSelection();visibleEdgeTypes.clear();visibleEdgeTypes.add('pair');visibleEdgeTypes.add('counter');for(const button of filterButtons){button.classList.add('active');button.setAttribute('aria-pressed','true')}applyEdgeFilters();render()});
+  window.addEventListener('resize',render);
+  render(); simulate();
+})();

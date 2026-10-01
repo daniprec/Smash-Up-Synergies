@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smash Up Faction Atlas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">Use the Fours · relationship map</p>
+      <h1>Faction Atlas</h1>
+    </div>
+    <div class="controls">
+      <label class="search"><span>Search</span><input id="search" type="search" list="faction-options" autocomplete="off" placeholder="Find a faction…"><datalist id="faction-options"></datalist></label>
+      <div class="edge-filters" aria-label="Relationship visibility">
+        <button class="filter active" data-edge-type="pair" type="button" aria-pressed="true"><i class="line pair"></i>Pairs</button>
+        <button class="filter active counter-filter" data-edge-type="counter" type="button" aria-pressed="true"><i class="line counter"></i>Counters</button>
+      </div>
+      <button id="reset" type="button">Reset view</button>
+    </div>
+  </header>
+  <main>
+    <section class="graph-shell" aria-label="Faction relationship graph">
+      <div class="legend">
+        <span><i class="line pair"></i>Good pair</span>
+        <span><i class="line counter"></i>Counter → countered</span>
+        <span><i class="dot source"></i>Card faction</span>
+        <span><i class="dot reference"></i>Referenced faction</span>
+      </div>
+      <svg id="graph" role="img" aria-label="Interactive network of Smash Up factions"></svg>
+      <div class="hint">Drag nodes · scroll to zoom · drag empty space to pan</div>
+      <p class="credit">Faction analysis credited to <a href="https://www.youtube.com/@UseTheFours" target="_blank" rel="noopener noreferrer">Use The Fours on YouTube</a>.</p>
+    </section>
+    <aside id="details" aria-live="polite">
+      <div class="empty-state">
+        <span class="empty-icon">✦</span>
+        <h2>Select a faction</h2>
+        <p>Click any node to inspect its strengths, weaknesses, pairings, and counters.</p>
+      </div>
+    </aside>
+  </main>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
