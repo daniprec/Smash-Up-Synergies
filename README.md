@@ -4,7 +4,7 @@ Open `index.html` in a modern browser. It is a static site suitable for GitHub P
 
 ## Controls
 
-- Click a faction to highlight its relationships and open its information panel.
+- Click a faction to highlight its relationships and open its information panel. Click a pairing or counter chip to read its explanation, open the timestamped podcast source, or choose View faction to navigate. Escape, the close button, or the backdrop closes the dialogue.
 - Black/white edges show bidirectional recommended pairings. Red arrows point from the countering faction toward the faction it counters.
 - Drag nodes to rearrange them.
 - Drag empty space to pan and use the mouse wheel to zoom.
@@ -16,6 +16,17 @@ Open `index.html` in a modern browser. It is a static site suitable for GitHub P
 - Card factions link to their AEG Smash Up Rulebook page when one exists. Licensed factions without an official page are identified in the detail panel.
 - Smaller gray nodes and list captions marked **Not yet classified** indicate factions without a complete analysis. Existing connections are retained; missing analysis is not treated as a zero rating.
 - Category and expansion tags are not yet present in the dataset; search currently matches names.
+- Analysis follows the podcast's 2026 two-player context, including rebalanced factions and Titans where applicable. Results may differ with older cards or without Titans.
+
+## Relationship explanations
+
+`relationship-data.js` contains an initial **116** short, original paraphrases drawn from all **eight** matching 2026 two-player tier-list episodes on Use The Fours. Other channel uploads (league reports, custom factions, showcase games, and the Munchkin overview) are excluded. Every summary has a timestamped source and optional version or matchup qualifications. These are summaries of auto-generated captions, not verbatim transcripts or independent rules rulings. Episode review is marked **partial**: a missing explanation is explicitly shown as pending rather than filled with a guessed reason.
+
+`relationship-model.js` owns canonical relationship keys. A pairing has one shared record regardless of which faction is opened. A counter has a directed record from the countering faction to its target, shared between Countered by and Counter of. All original relationships and every faction are retained. Explicit, named recommendations from the captions can add connections, and runtime lists and the graph are derived from the same records.
+
+The **12** editorial TODOs in `relationship-data.js` retain broader archetype suggestions, source timestamps, and proposed tags. They appear under Pairings to explore on the relevant faction and do not create graph edges. Speculative combinations and recommendations limited to another player count remain TODOs until reviewed. Tags are proposals, not an active tagging system.
+
+Run `node --test tests/relationships.test.cjs` to validate reciprocity, counter direction, original-data preservation, source coverage, and separation of TODOs from confirmed connections. `scripts/review_transcripts.py` helps inspect discussion windows from local caption exports; its local `transcript-workspace.json` manifest is ignored, and full transcripts are not shipped with the website.
 
 ## Updating the data
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Smash Up Synergies</title>
-  <link rel="stylesheet" href="styles.css?v=20261111-4">
+  <link rel="stylesheet" href="styles.css?v=20261111-5">
 </head>
 <body>
   <header>
@@ -29,6 +29,7 @@
       <button id="reset" type="button">Reset view</button>
     </div>
   </header>
+  <p class="rules-note">Two-player analysis using rebalanced factions and Titans where available in the podcast’s 2026 rules context. Your experience may differ with older cards or without Titans.</p>
   <main>
     <section class="faction-browser" aria-label="Factions">
       <div class="browser-heading"><p id="faction-count" role="status"></p></div>
@@ -58,7 +59,15 @@
       </div>
     </aside>
   </main>
+  <dialog id="relationship-dialog" aria-labelledby="relationship-title">
+    <div class="dialog-header"><span id="relationship-kind" class="detail-number"></span><button id="close-relationship" type="button" aria-label="Close explanation">✕</button></div>
+    <h2 id="relationship-title"></h2>
+    <div id="relationship-commentary"></div>
+    <div id="relationship-navigation" class="dialog-navigation"></div>
+  </dialog>
   <script src="data.js?v=20261111-2"></script>
-  <script src="app.js?v=20261111-4"></script>
+  <script src="relationship-data.js?v=20261111-1"></script>
+  <script src="relationship-model.js?v=20261111-1"></script>
+  <script src="app.js?v=20261111-5"></script>
 </body>
 </html>

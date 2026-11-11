@@ -14,12 +14,16 @@
   const initialDetails = details.innerHTML;
   const artworkButton = document.querySelector('#artwork');
   const resetButton = document.querySelector('#reset');
+  const relationshipDialog = document.querySelector('#relationship-dialog');
+  const commentaryData = window.RELATIONSHIP_DATA;
   const NS = 'http://www.w3.org/2000/svg';
   const width = () => svg.clientWidth || 900;
   const height = () => svg.clientHeight || 700;
   const sources = window.FACTION_DATA;
   const references = window.FACTION_REFERENCE_DATA || [];
   const allFactions = [...sources, ...references];
+  const relationshipModel = window.RelationshipModel.build(allFactions, commentaryData.entries);
+  for (const faction of allFactions) Object.assign(faction, relationshipModel.connections.get(faction.name));
   const byName = new Map(allFactions.map((f) => [f.name, f]));
   const nodes = [
     ...sources.map((f, i) => ({ id:f.name, faction:f, source:true, x:width()/2+Math.cos(i)*120, y:height()/2+Math.sin(i)*120, vx:0, vy:0 })),
@@ -34,25 +38,10 @@
       if (factionsCountered.has(counter)) factionsCountered.set(counter, factionsCountered.get(counter) + 1);
     }
   }
-  const edgeKey = (a,b,type) => type === 'pair' ? `${type}:${[a,b].sort().join('|')}` : `${type}:${a}>${b}`;
-  const seen = new Set();
-  const edges = [];
-  for (const faction of sources) {
-    for (const [type, names] of [['pair', faction.partners], ['counter', faction.counters]]) {
-      for (const target of names) {
-        if (!nodeById.has(target) || target === faction.name) continue;
-        const key = edgeKey(faction.name, target, type);
-        if (!seen.has(key)) {
-          seen.add(key);
-          // A card says it is "countered by" the named faction, so the arrow
-          // runs from the counter to the countered faction.
-          edges.push(type === 'counter'
-            ? { source:nodeById.get(target), target:nodeById.get(faction.name), type }
-            : { source:nodeById.get(faction.name), target:nodeById.get(target), type });
-        }
-      }
-    }
-  }
+  const edges = [...relationshipModel.relationships.values()].map(relationship => ({
+    source:nodeById.get(relationship.from), target:nodeById.get(relationship.to),
+    type:relationship.type, relationship,
+  }));
 
   const defs = document.createElementNS(NS, 'defs');
   const marker = document.createElementNS(NS, 'marker');
@@ -68,6 +57,14 @@
     const line = document.createElementNS(NS, 'line');
     line.classList.add('edge'); if (edge.type === 'counter') { line.classList.add('counter'); line.setAttribute('marker-end', 'url(#counter-arrow)'); }
     edge.el = line; edgeLayer.append(line);
+    line.setAttribute('role', 'button');
+    line.setAttribute('tabindex', '0');
+    line.setAttribute('aria-label', edge.type === 'pair' ? `${edge.source.id} and ${edge.target.id}: why they pair` : `${edge.source.id} counters ${edge.target.id}: why`);
+    line.addEventListener('pointerdown', event => event.stopPropagation());
+    line.addEventListener('click', event => { event.stopPropagation(); showRelationship(edge.relationship); });
+    line.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showRelationship(edge.relationship); }
+    });
   }
   for (const node of nodes) {
     const group = document.createElementNS(NS, 'g');
@@ -224,14 +221,54 @@
     const emptyLabel = node.source ? '—' : 'Not yet recorded';
     const hasAnalysis = node.source || f.partners.length || f.counters.length || f.counterTargets?.length;
     const credit = hasAnalysis ? '<p class="detail-credit">Connections and analysis credited to <a href="https://www.youtube.com/@UseTheFoursPodcast" target="_blank" rel="noopener noreferrer">Use The Fours</a>.</p>' : '';
-    details.innerHTML = `${hero}<div class="detail-body"><span class="detail-number">${number}</span><h2>${escapeHtml(f.name)}</h2>${officialPage}${analysis}${chipSection('Good pairs','partner',f.partners,emptyLabel)}${chipSection('Countered by','counter',f.counters,emptyLabel)}${chipSection('Counter of','counter',f.counterTargets || [], node.source ? 'Nothing' : emptyLabel)}${credit}</div>`;
+    const reviewTodos = commentaryData.todos.filter(todo => todo.faction === f.name);
+    const reviewSection = reviewTodos.length ? `<section class="section review-notes"><h3>Pairings to explore</h3><p>Broad podcast recommendations awaiting tags and individual pairing review.</p><ul>${reviewTodos.map(todo=>`<li>${escapeHtml(todo.summary)} <a href="${sourceUrl(todo.source)}" target="_blank" rel="noopener noreferrer">Podcast source ↗</a></li>`).join('')}</ul></section>` : '';
+    details.innerHTML = `${hero}<div class="detail-body"><span class="detail-number">${number}</span><h2>${escapeHtml(f.name)}</h2>${officialPage}${analysis}<p class="relationship-hint">Click any pairing or counter below to see a brief explanation of why. Explanations are being added; some are not yet available.</p>${chipSection('Good pairs','partner',f.partners,emptyLabel)}${chipSection('Countered by','counter',f.counters,emptyLabel,'counteredBy')}${chipSection('Counter of','counter',f.counterTargets || [], node.source ? 'Nothing' : emptyLabel,'counterTargets')}${reviewSection}${credit}</div>`;
     details.querySelector('.faction-cover')?.addEventListener('error', (event) => { event.currentTarget.hidden = true; });
-    details.querySelectorAll('.chip').forEach((chip) => chip.addEventListener('click', () => selectNode(nodeById.get(chip.dataset.name))));
+    details.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => showRelationship(relationshipModel.relationships.get(decodeURIComponent(chip.dataset.relationship)))));
     openMobileDetails();
   }
   function listSection(title, cls, items) { return `<section class="section ${cls}"><h3>${title}</h3>${items.length ? `<ul>${items.map((x)=>`<li>${escapeHtml(x)}</li>`).join('')}</ul>` : '<p class="empty-copy">—</p>'}</section>`; }
-  function chipSection(title, cls, items, emptyLabel = '—') { return `<section class="section ${cls}"><h3>${title}</h3>${items.length ? `<div class="chips">${items.map((x)=>`<button class="chip ${cls==='counter'?'counter':''}" data-name="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div>` : `<p class="empty-copy">${emptyLabel}</p>`}</section>`; }
-  function escapeHtml(value) { const d=document.createElement('div'); d.textContent=value; return d.innerHTML; }
+  function chipSection(title, cls, items, emptyLabel = '—', direction = 'pair') {
+    return `<section class="section ${cls}"><h3>${title}</h3>${items.length ? `<div class="chips">${items.map(name => {
+      const id = direction === 'pair' ? window.RelationshipModel.key('pair', selected.id, name)
+        : window.RelationshipModel.key('counter', direction === 'counteredBy' ? name : selected.id, direction === 'counteredBy' ? selected.id : name);
+      return `<button class="chip ${cls==='counter'?'counter':''}" data-relationship="${encodeURIComponent(id)}" aria-haspopup="dialog">${escapeHtml(name)}</button>`;
+    }).join('')}</div>` : `<p class="empty-copy">${emptyLabel}</p>`}</section>`;
+  }
+  function escapeHtml(value) { const d=document.createElement('div'); d.textContent=value; return d.innerHTML.replace(/"/g, '&quot;'); }
+  function sourceUrl(source) { return `https://www.youtube.com/watch?v=${encodeURIComponent(source.videoId)}&t=${source.startSeconds}s`; }
+  function timeLabel(seconds) {
+    const h = Math.floor(seconds/3600), m = Math.floor(seconds%3600/60), s = String(seconds%60).padStart(2,'0');
+    return h ? `${h}:${String(m).padStart(2,'0')}:${s}` : `${m}:${s}`;
+  }
+  function showRelationship(relationship) {
+    const isPair = relationship.type === 'pair';
+    const names = isPair ? [relationship.from,relationship.to].sort((a,b)=>a.localeCompare(b,'en')) : [relationship.from,relationship.to];
+    document.querySelector('#relationship-kind').textContent = isPair ? 'WHY THEY PAIR' : 'WHY THIS COUNTER WORKS';
+    document.querySelector('#relationship-title').textContent = `${names[0]} ${isPair ? '+' : 'counters'} ${names[1]}`;
+    const explanation = relationship.explanation;
+    document.querySelector('#relationship-commentary').innerHTML = explanation
+      ? `<p class="relationship-summary">${escapeHtml(explanation.summary)}</p>${explanation.conditions.length ? `<p class="relationship-conditions">${explanation.conditions.map(escapeHtml).join(' · ')}</p>` : ''}<div class="relationship-sources">${explanation.sources.map(source=>`<a href="${sourceUrl(source)}" target="_blank" rel="noopener noreferrer">Watch the explanation at ${timeLabel(source.startSeconds)} ↗</a>`).join('')}</div><p class="transcript-credit">Summary of Use The Fours’ discussion, based on auto-generated captions. Two-player games; rebalanced cards and Titans where applicable.</p>`
+      : '<p class="relationship-summary">An explanation has not yet been added for this relationship.</p><p class="transcript-credit">The connection is recorded in the faction data. A timestamped podcast summary is still to come.</p>';
+    const navigation = document.querySelector('#relationship-navigation');
+    navigation.replaceChildren();
+    for (const name of names) {
+      const button = document.createElement('button');
+      button.type = 'button'; button.textContent = `View ${name}`;
+      button.addEventListener('click', () => { relationshipDialog.close(); selectNode(nodeById.get(name)); });
+      navigation.append(button);
+    }
+    relationshipDialog.showModal();
+    document.body.classList.add('dialog-open');
+  }
+  document.querySelector('#close-relationship').addEventListener('click', () => relationshipDialog.close());
+  relationshipDialog.addEventListener('click', event => {
+    if (event.target !== relationshipDialog) return;
+    const rect = relationshipDialog.getBoundingClientRect();
+    if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) relationshipDialog.close();
+  });
+  relationshipDialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
   function showSortedOverview() {
     overviewOpen = true;
     clearSelection();
