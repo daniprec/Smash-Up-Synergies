@@ -10,7 +10,8 @@
   const mobile = window.matchMedia('(max-width: 850px)');
   const factionOptions = document.querySelector('#faction-options');
   const filterButtons = [...document.querySelectorAll('.filter')];
-  const rankingsButton = document.querySelector('#rankings');
+  const sortBy = document.querySelector('#sort-by');
+  const initialDetails = details.innerHTML;
   const artworkButton = document.querySelector('#artwork');
   const resetButton = document.querySelector('#reset');
   const NS = 'http://www.w3.org/2000/svg';
@@ -27,8 +28,8 @@
   const nodeById = new Map(nodes.map((n) => [n.id, n]));
   factionOptions.innerHTML = nodes.map((node) => `<option value="${node.id}"></option>`).join('');
   const visibleEdgeTypes = new Set(['pair', 'counter']);
-  const factionsCountered = new Map(sources.map((faction) => [faction.name, 0]));
-  for (const faction of sources) {
+  const factionsCountered = new Map(allFactions.map((faction) => [faction.name, 0]));
+  for (const faction of allFactions) {
     for (const counter of faction.counters) {
       if (factionsCountered.has(counter)) factionsCountered.set(counter, factionsCountered.get(counter) + 1);
     }
@@ -80,7 +81,7 @@
 
   let transform = { x:0, y:0, k:1 };
   let selected = null;
-  let rankingMode = 'synergies';
+  let overviewOpen = false;
   let artworkEnabled = false;
   let artworkReady = false;
   let dragged = null;
@@ -88,6 +89,34 @@
   let listScroll = 0;
   let returnFocus = null;
   const alphabeticalNodes = [...nodes].sort((a, b) => a.id.localeCompare(b.id, 'en'));
+  const rank = (faction) => Number.isFinite(faction.number) && faction.number > 0 ? faction.number : Infinity;
+  const sortDefinitions = {
+    alphabetical: { title:'Factions A–Z', description:'All factions in alphabetical order.' },
+    overall: { title:'Overall ranking', description:'Best rank first (lowest number). Unranked factions appear last.', value:rank, label:(value)=>Number.isFinite(value) ? `Rank #${value}` : 'Unranked' },
+    synergies: { title:'Synergies', description:'Most good-pair connections first. Missing counts are zero.', value:(f)=>f.partners?.length || 0, label:(value)=>`${value} ${value === 1 ? 'synergy' : 'synergies'}` },
+    counteredBy: { title:'Countered by', description:'Most counters against a faction first. Missing counts are zero.', value:(f)=>f.counters?.length || 0, label:(value)=>`Countered by ${value}` },
+    countersOthers: { title:'They counter', description:'Most factions they counter first. Missing counts are zero.', value:(f)=>factionsCountered.get(f.name) || 0, label:(value)=>`Counters ${value}` },
+  };
+  function sortedNodes() {
+    const definition = sortDefinitions[sortBy.value];
+    return [...nodes].sort((a, b) => {
+      const nameOrder = a.id.localeCompare(b.id, 'en');
+      if (!definition.value) return nameOrder;
+      const difference = definition.value(a.faction) - definition.value(b.faction);
+      return (sortBy.value === 'overall' ? difference : -difference) || nameOrder;
+    });
+  }
+  function sortFactionList() {
+    const definition = sortDefinitions[sortBy.value];
+    for (const node of sortedNodes()) {
+      const row = listRows.get(node);
+      const classification = node.source ? 'Classified' : 'Not yet classified';
+      row.querySelector('.faction-row-caption').textContent = definition.value
+        ? `${definition.label(definition.value(node.faction))} · ${classification}`
+        : `${classification} · View faction`;
+      factionList.append(row);
+    }
+  }
   const listRows = new Map();
   for (const node of alphabeticalNodes) {
     const li = document.createElement('li');
@@ -99,7 +128,7 @@
     name.textContent = node.id;
     const caption = document.createElement('span');
     caption.className = 'faction-row-caption';
-    caption.textContent = node.source ? 'View strengths, pairs & counters' : 'Referenced faction · View connections';
+    caption.textContent = node.source ? 'Classified · View strengths, pairs & counters' : 'Not yet classified · View faction';
     const arrow = document.createElement('span');
     arrow.className = 'faction-row-arrow';
     arrow.textContent = '›';
@@ -125,6 +154,7 @@
     factionCount.textContent = `${count} of ${nodes.length} factions`;
     noFactions.hidden = count !== 0;
     applyEdgeFilters();
+    if (overviewOpen) showSortedOverview();
   }
   function openMobileDetails() {
     if (!mobile.matches) return;
@@ -178,7 +208,7 @@
 
   function selectNode(node) {
     selected = node;
-    rankingsButton.classList.remove('active');
+    overviewOpen = false;
     const near = connected(node); near.add(node);
     for (const n of nodes) { n.el.classList.toggle('selected', n===node); n.el.classList.toggle('dim', !near.has(n)); }
     for (const e of edges) { const active=e.source===node||e.target===node; e.el.classList.toggle('active',active); e.el.classList.toggle('dim',!active); }
@@ -187,30 +217,28 @@
       ? `<a class="official-link" href="${f.officialUrl}" target="_blank" rel="noopener noreferrer">See official page ↗</a>`
       : '<div class="official-link unavailable">No official page available</div>';
     const hero = f.imageUrl ? `<img class="faction-cover" src="${f.imageUrl}" alt="${escapeHtml(f.name)} cover artwork" loading="lazy">` : '';
-    const number = f.number ? `FACTION #${f.number}` : 'REFERENCED FACTION';
-    details.innerHTML = `${hero}<div class="detail-body"><span class="detail-number">${number}</span><h2>${escapeHtml(f.name)}</h2>${officialPage}${listSection('Strengths','strength',f.strengths)}${listSection('Weaknesses','weakness',f.weaknesses)}${chipSection('Good pairs','partner',f.partners)}${chipSection('Countered by','counter',f.counters)}${chipSection('Counter of','counter',f.counterTargets || [], 'Nothing')}<p class="detail-credit">Based on the analysis done in Use The Fours. <a href="https://www.youtube.com/@UseTheFoursPodcast" target="_blank" rel="noopener noreferrer">Link here!</a></p></div>`;
+    const number = node.source ? `CLASSIFIED · FACTION #${f.number}` : 'NOT YET CLASSIFIED';
+    const analysis = node.source
+      ? `${listSection('Strengths','strength',f.strengths)}${listSection('Weaknesses','weakness',f.weaknesses)}`
+      : '<p class="classification-note">This faction has not yet been classified. Strengths, weaknesses, and a full synergy analysis are not yet available. Any connections below come from existing faction analyses.</p>';
+    const emptyLabel = node.source ? '—' : 'Not yet recorded';
+    const hasAnalysis = node.source || f.partners.length || f.counters.length || f.counterTargets?.length;
+    const credit = hasAnalysis ? '<p class="detail-credit">Connections and analysis credited to <a href="https://www.youtube.com/@UseTheFoursPodcast" target="_blank" rel="noopener noreferrer">Use The Fours</a>.</p>' : '';
+    details.innerHTML = `${hero}<div class="detail-body"><span class="detail-number">${number}</span><h2>${escapeHtml(f.name)}</h2>${officialPage}${analysis}${chipSection('Good pairs','partner',f.partners,emptyLabel)}${chipSection('Countered by','counter',f.counters,emptyLabel)}${chipSection('Counter of','counter',f.counterTargets || [], node.source ? 'Nothing' : emptyLabel)}${credit}</div>`;
+    details.querySelector('.faction-cover')?.addEventListener('error', (event) => { event.currentTarget.hidden = true; });
     details.querySelectorAll('.chip').forEach((chip) => chip.addEventListener('click', () => selectNode(nodeById.get(chip.dataset.name))));
     openMobileDetails();
   }
   function listSection(title, cls, items) { return `<section class="section ${cls}"><h3>${title}</h3>${items.length ? `<ul>${items.map((x)=>`<li>${escapeHtml(x)}</li>`).join('')}</ul>` : '<p class="empty-copy">—</p>'}</section>`; }
   function chipSection(title, cls, items, emptyLabel = '—') { return `<section class="section ${cls}"><h3>${title}</h3>${items.length ? `<div class="chips">${items.map((x)=>`<button class="chip ${cls==='counter'?'counter':''}" data-name="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div>` : `<p class="empty-copy">${emptyLabel}</p>`}</section>`; }
   function escapeHtml(value) { const d=document.createElement('div'); d.textContent=value; return d.innerHTML; }
-  const rankingDefinitions = {
-    synergies: { label:'Synergies', title:'Most good-pair connections', description:'Counts every unique recommended pairing shown for the faction.', value:(faction)=>faction.partners.length },
-    counteredBy: { label:'Countered by', title:'Most counters against them', description:'Counts factions listed as counters to this faction.', value:(faction)=>faction.counters.length },
-    countersOthers: { label:'They counter', title:'Most card factions they counter', description:'Number of other factions countered by this faction.', value:(faction)=>factionsCountered.get(faction.name) || 0 },
-  };
-  function showRankings(mode = rankingMode) {
-    rankingMode = mode;
-    selected = null;
+  function showSortedOverview() {
+    overviewOpen = true;
     clearSelection();
-    rankingsButton.classList.add('active');
-    const definition = rankingDefinitions[mode];
-    const ranked = [...sources].sort((a,b)=>definition.value(b)-definition.value(a) || a.name.localeCompare(b.name));
-    details.innerHTML = `<div class="rankings-body"><span class="detail-number">FACTION OVERVIEW</span><h2>${definition.title}</h2><p class="rankings-intro">${definition.description}</p><div class="ranking-tabs">${Object.entries(rankingDefinitions).map(([key,item])=>`<button class="ranking-tab ${key===mode?'active':''}" data-ranking="${key}" type="button">${item.label}</button>`).join('')}</div><ol class="ranking-list">${ranked.map((faction,index)=>`<li><button class="ranking-row" data-name="${escapeHtml(faction.name)}" type="button"><span class="ranking-position">${index+1}</span><span class="ranking-name">${escapeHtml(faction.name)}</span><span class="ranking-count">${definition.value(faction)}</span></button></li>`).join('')}</ol></div>`;
-    details.querySelectorAll('.ranking-tab').forEach((button)=>button.addEventListener('click',()=>showRankings(button.dataset.ranking)));
+    const definition = sortDefinitions[sortBy.value];
+    const ranked = sortedNodes().filter(matchesSearch);
+    details.innerHTML = `<div class="rankings-body"><span class="detail-number">FACTION OVERVIEW</span><h2>${definition.title}</h2><p class="rankings-intro">${definition.description}</p><p class="rankings-intro">${ranked.length} of ${nodes.length} factions</p><ol class="ranking-list">${ranked.map((node,index)=>`<li><button class="ranking-row ${sortBy.value === 'overall' ? 'overall-rank' : ''}" data-name="${escapeHtml(node.id)}" type="button"><span class="ranking-position">${index+1}</span><span class="ranking-name">${escapeHtml(node.id)}</span><span class="ranking-count">${definition.value ? (sortBy.value === 'overall' ? (Number.isFinite(rank(node.faction)) ? `#${rank(node.faction)}` : 'Unranked') : definition.value(node.faction)) : '›'}</span></button></li>`).join('')}</ol>${ranked.length ? '' : '<p class="empty-copy">No factions match your search.</p>'}</div>`;
     details.querySelectorAll('.ranking-row').forEach((button)=>button.addEventListener('click',()=>selectNode(nodeById.get(button.dataset.name))));
-    openMobileDetails();
   }
 
   function point(event) { const rect=svg.getBoundingClientRect(); return { x:(event.clientX-rect.left-transform.x)/transform.k, y:(event.clientY-rect.top-transform.y)/transform.k }; }
@@ -234,7 +262,10 @@
     button.setAttribute('aria-pressed', String(visibleEdgeTypes.has(type)));
     applyEdgeFilters();
   }));
-  rankingsButton.addEventListener('click', () => showRankings());
+  sortBy.addEventListener('change', () => {
+    sortFactionList();
+    if (!mobile.matches) showSortedOverview();
+  });
   function ensureArtwork() {
     if (artworkReady) return;
     for (const [index, node] of nodes.entries()) {
@@ -256,11 +287,11 @@
     artworkButton.setAttribute('aria-pressed', String(artworkEnabled));
   });
   function applyEdgeFilters() { for (const edge of edges) edge.el.style.display = visibleEdgeTypes.has(edge.type) && matchesSearch(edge.source) && matchesSearch(edge.target) ? '' : 'none'; }
-  resetButton.addEventListener('click',()=>{transform={x:0,y:0,k:1};search.value='';clearSelection();rankingsButton.classList.remove('active');visibleEdgeTypes.clear();visibleEdgeTypes.add('pair');visibleEdgeTypes.add('counter');for(const button of filterButtons){button.classList.add('active');button.setAttribute('aria-pressed','true')}applyEdgeFilters();render()});
+  resetButton.addEventListener('click',()=>{transform={x:0,y:0,k:1};search.value='';clearSelection();overviewOpen=false;sortBy.value='alphabetical';sortFactionList();details.innerHTML=initialDetails;visibleEdgeTypes.clear();visibleEdgeTypes.add('pair');visibleEdgeTypes.add('counter');for(const button of filterButtons){button.classList.add('active');button.setAttribute('aria-pressed','true')}applyEdgeFilters();render()});
   resetButton.addEventListener('click', () => { applySearch(); backToFactions(); });
   mobile.addEventListener('change', () => {
     if (!mobile.matches) { main.classList.remove('detail-open'); simulate(); }
   });
   window.addEventListener('resize',render);
-  applySearch(); render(); simulate();
+  sortFactionList(); applySearch(); render(); simulate();
 })();

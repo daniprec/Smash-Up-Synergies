@@ -1,0 +1,457 @@
+{
+  "sourceUrl": "https://smashup-rulebook.alderac.com/wiki",
+  "section": "Faction Links",
+  "checkedAt": "2026-11-11T10:03:16.778167+00:00",
+  "factions": [
+    {
+      "name": "Action Heroes",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Action_Heroes",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/c5/SU1072_CoverPhoto_ActionHeroes.png"
+    },
+    {
+      "name": "Adolescent Epic Geckos",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Adolescent_Epic_Geckos",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/74/SU1077_CoverPhoto_AdolescentEpicGeckos.png"
+    },
+    {
+      "name": "Aliens",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Aliens",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/71/SU1001_CoverPhoto_Aliens.png"
+    },
+    {
+      "name": "Anansi Tales",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Anansi_Tales",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/dd/SU1061_CoverPhoto_Anansi.png"
+    },
+    {
+      "name": "Ancient Egyptians",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Ancient_Egyptians",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/f/fd/SU1052_CoverPhoto_AncientEgyptians.png"
+    },
+    {
+      "name": "Ancient Incas",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Ancient_Incas",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/4e/SU1062_CoverPhoto_AncientIncas.png"
+    },
+    {
+      "name": "Astroknights",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Astroknights",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/ef/SU1034_CoverPhoto_AstroKnights.png"
+    },
+    {
+      "name": "Backtimers",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Backtimers",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/8b/SU1073_CoverPhoto_BacktimersA.png"
+    },
+    {
+      "name": "Bear Cavalry",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Bear_Cavalry",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/78/SU1009_CoverPhoto_BearCavalry.png"
+    },
+    {
+      "name": "Changerbots",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Changerbots",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/1e/SU1035_CoverPhoto_ChangerBots.png"
+    },
+    {
+      "name": "Clerics",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Clerics",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/3/36/SU1086_CoverPhoto_Munchkin_Clerics.png"
+    },
+    {
+      "name": "Clowns",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Clowns",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/20/SU1082_CoverPhoto_Clowns.png"
+    },
+    {
+      "name": "Cowboys",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Cowboys",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/21/SU1053_CoverPhoto_Cowboys.png"
+    },
+    {
+      "name": "Cyborg Apes",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Cyborg_Apes",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/d3/SU1017_CoverPhoto_CyborgApes.png"
+    },
+    {
+      "name": "Dinosaurs",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Dinosaurs",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/8a/SU1002_CoverPhoto_Dinosaurs.png"
+    },
+    {
+      "name": "Disco Dancers",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Disco_Dancers",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e7/SU1046_CoverPhoto_DiscoDancers.png"
+    },
+    {
+      "name": "Dragons",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Dragons",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/a/ad/SU1029_CoverPhoto_Dragons.png"
+    },
+    {
+      "name": "Dwarves",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Dwarves",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/a/a0/SU1087_CoverPhoto_Munchkin_Dwarves.png"
+    },
+    {
+      "name": "Elder Things",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Elder_Things",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e8/SU1013_CoverPhoto_ElderThings.png"
+    },
+    {
+      "name": "Elves",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Elves",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/47/SU1088_CoverPhoto_Munchkin_Elves.png"
+    },
+    {
+      "name": "Explorers",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Explorers",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/bc/SU1038_CoverPhoto_Explorers.png"
+    },
+    {
+      "name": "Extramorphs",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Extramorphs",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/5/59/SU1074_CoverPhoto_Extramorphs.png"
+    },
+    {
+      "name": "Fairies",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Fairies",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/d2/SU1025_CoverPhoto_Fairies.png"
+    },
+    {
+      "name": "G.I. Gerald",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/G.I._Gerald",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/eb/SU1078_CoverPhoto_G.I._Gerald.png"
+    },
+    {
+      "name": "Geeks",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Geeks",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/9/9e/SU1050_CoverPhoto_Geeks.png"
+    },
+    {
+      "name": "Ghosts",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Ghosts",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e6/SU1010_CoverPhoto_Ghosts.png"
+    },
+    {
+      "name": "Giant Ants",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Giant_Ants",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e9/SU1021_CoverPhoto_GiantAnts.png"
+    },
+    {
+      "name": "Goblins",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Goblins",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/3/3f/SU1066_CoverPhoto_Goblins.png"
+    },
+    {
+      "name": "Grannies",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Grannies",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/c8/SU1039_CoverPhoto_Grannies.png"
+    },
+    {
+      "name": "Grimms' Fairy Tales",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Grimms%27_Fairy_Tales",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/5/59/SU1063_CoverPhoto_GrimmsFairyTales.png"
+    },
+    {
+      "name": "Halflings",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Halflings",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/1b/SU1089_CoverPhoto_Munchkin_Halflings.png"
+    },
+    {
+      "name": "Ignobles",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Ignobles",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/5/5f/SU1036_CoverPhoto_Ignobles.png"
+    },
+    {
+      "name": "Innsmouth",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Innsmouth",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/c6/SU1014_CoverPhoto_Innsmouth.png"
+    },
+    {
+      "name": "Itty Critters",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Itty_Critters",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2a/SU1042_CoverPhoto_IttyCritters.png"
+    },
+    {
+      "name": "Kaiju",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Kaiju",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/21/SU1043_CoverPhoto_Kaiju.png"
+    },
+    {
+      "name": "Killer Plants",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Killer_Plants",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/6/63/SU1011_CoverPhoto_KillerPlants.png"
+    },
+    {
+      "name": "Kitty Cats",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Kitty_Cats",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/dd/SU1026_CoverPhoto_KittyCats.png"
+    },
+    {
+      "name": "Knights of the Round Table",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Knights_of_the_Round_Table",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/de/SU1067_CoverPhoto_KnightsOfTheRoundTable.png"
+    },
+    {
+      "name": "Kung Fu Fighters",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Kung_Fu_Fighters",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/89/SU1047_CoverPhoto_Kung_Fu.png"
+    },
+    {
+      "name": "Luchadors",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Luchadors",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/8f/SU1056_CoverPhoto_Luchadores.png"
+    },
+    {
+      "name": "Mad Scientists",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Mad_Scientists",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/0/01/SU1022_CoverPhoto_MadScientists.png"
+    },
+    {
+      "name": "Mages",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Mages",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/6/63/SU1090_CoverPhoto_Munchkin_Mages.png"
+    },
+    {
+      "name": "Magical Girls",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Magical_Girls",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/26/SU1044_CoverPhoto_MagicalGirls.png"
+    },
+    {
+      "name": "Mega Troopers",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Mega_Troopers",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/5/54/SU1045_CoverPhoto_MegaTroopers.png"
+    },
+    {
+      "name": "Mermaids",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Mermaids",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/4a/SU1068_CoverPhoto_Mermaids.png"
+    },
+    {
+      "name": "Minions of Cthulhu",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Minions_of_Cthulhu",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/0/0d/SU1015_CoverPhoto_Cthulhu.png"
+    },
+    {
+      "name": "Miskatonic University",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Miskatonic_University",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/4f/SU1016_CoverPhoto_Miskatonic.png"
+    },
+    {
+      "name": "Mounties",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Mounties",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e7/SU1057_CoverPhoto_Mounties.png"
+    },
+    {
+      "name": "Musketeers",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Musketeers",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/b1/SU1058_CoverPhoto_Musketeers.png"
+    },
+    {
+      "name": "Mythic Greeks",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Mythic_Greeks",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e0/SU1030_CoverPhoto_MythicGreeks.png"
+    },
+    {
+      "name": "Mythic Horses",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Mythic_Horses",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/b4/SU1027_CoverPhoto_MythicHorses.png"
+    },
+    {
+      "name": "Ninjas",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Ninjas",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/16/SU1003_CoverPhoto_Ninjas.png"
+    },
+    {
+      "name": "Orcs",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Orcs",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/ed/SU1091_CoverPhoto_Munchkin_Orcs.png"
+    },
+    {
+      "name": "Pearl and the Images",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Pearl_and_the_Images",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2c/SU1079_CoverPhoto_PearlAndTheImages.png"
+    },
+    {
+      "name": "Penguins",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Penguins",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/cb/SU1060_CoverPhoto_Penguins.png"
+    },
+    {
+      "name": "Pirates",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Pirates",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/42/SU1004_CoverPhoto_Pirates.png"
+    },
+    {
+      "name": "Polynesian Voyagers",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Polynesian_Voyagers",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/0/0e/SU1064_CoverPhoto_PolynesianWarriors.png"
+    },
+    {
+      "name": "Princesses",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Princesses",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/f/f8/SU1028_CoverPhoto_Princesses.png"
+    },
+    {
+      "name": "Robots",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Robots",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/17/SU1005_CoverPhoto_Robots.png"
+    },
+    {
+      "name": "Rock Stars",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Rock_Stars",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2c/SU1040_CoverPhoto_RockStars.png"
+    },
+    {
+      "name": "Rulers of the Cosmos",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Rulers_of_the_Cosmos",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/a/a9/SU1080_CoverPhoto_RulersOfTheCosmos.png"
+    },
+    {
+      "name": "Russian Fairy Tales",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Russian_Fairy_Tales",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/74/SU1065_CoverPhoto_RussianFairyTales.png"
+    },
+    {
+      "name": "Samurai",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Samurai",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/d5/SU1054_CoverPhoto_Samurai.png"
+    },
+    {
+      "name": "Shapeshifters",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Shapeshifters",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/85/SU1018_CoverPhoto_ShapeShifters.png"
+    },
+    {
+      "name": "Sharks",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Sharks",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/26/SU1031_CoverPhoto_Sharks.png"
+    },
+    {
+      "name": "Sheep",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Sheep",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/cc/SU1069_CoverPhoto_Sheep.png"
+    },
+    {
+      "name": "Skeletons",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Skeletons",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/a/a9/SU1070_CoverPhoto_Skeletons.png"
+    },
+    {
+      "name": "Slashers",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Slashers",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/4b/SU1081_CoverPhoto_Slashers_Folder.png"
+    },
+    {
+      "name": "Smash Up All Stars",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Smash_Up_All_Stars",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e6/SU1051_CoverPhoto_SmashUpAllStars.png"
+    },
+    {
+      "name": "Star Roamers",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Star_Roamers",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/76/SU1037_CoverPhoto_StarRoamers_Folder.png"
+    },
+    {
+      "name": "Steampunks",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Steampunks",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/7d/SU1012_CoverPhoto_Steampunks.png"
+    },
+    {
+      "name": "Sumo Wrestlers",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Sumo_Wrestlers",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2d/SU1059_CoverPhoto_SumoWrestlers.png"
+    },
+    {
+      "name": "Super Spies",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Super_Spies",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/73/SU1019_CoverPhoto_SuperSpies.png"
+    },
+    {
+      "name": "Super Heroes",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Super_Heroes",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/14/SU1032_CoverPhoto_Superheroes.png"
+    },
+    {
+      "name": "Teddy Bears",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Teddy_Bears",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2c/SU1041_CoverPhoto_TeddyBears.png"
+    },
+    {
+      "name": "Teens",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Teens",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/bf/SU1076_CoverPhoto_Teens_Folder.png"
+    },
+    {
+      "name": "Thieves",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Thieves",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/cc/SU1092_CoverPhoto_Munchkin_Thieves.png"
+    },
+    {
+      "name": "Time Travelers",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Time_Travelers",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/c2/SU1020_CoverPhoto_TimeTravelers.png"
+    },
+    {
+      "name": "Tornados",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Tornados",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/b4/SU1033_CoverPhoto_Tornados.png"
+    },
+    {
+      "name": "Tricksters",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Tricksters",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/1a/SU1006_CoverPhoto_Tricksters.png"
+    },
+    {
+      "name": "Truckers",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Truckers",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/19/SU1048_CoverPhoto_Truckers.png"
+    },
+    {
+      "name": "Vampires",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Vampires",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/13/SU1023_CoverPhoto_Vampires.png"
+    },
+    {
+      "name": "Vigilantes",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Vigilantes",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/ee/SU1049_CoverPhoto_Vigilantes.png"
+    },
+    {
+      "name": "Vikings",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Vikings",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/5/5b/SU1055_CoverPhoto_Vikings.png"
+    },
+    {
+      "name": "Warriors",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Warriors",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/6/63/SU1093_CoverPhoto_Munchkin_Warriors.png"
+    },
+    {
+      "name": "Werewolves",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Werewolves",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/a/a1/SU1024_CoverPhoto_Werewolves.png"
+    },
+    {
+      "name": "Wizards",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Wizards",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2f/SU1007_CoverPhoto_Wizards.png"
+    },
+    {
+      "name": "World Champs",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/World_Champs",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/71/SU1071_CoverPhoto_WorldChamps.png"
+    },
+    {
+      "name": "Wraithrustlers",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Wraithrustlers",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/f/f3/SU1075_CoverPhoto_Wraithrustlers.png"
+    },
+    {
+      "name": "Zombies",
+      "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Zombies",
+      "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/12/SU1008_CoverPhoto_Zombies.png"
+    }
+  ]
+}

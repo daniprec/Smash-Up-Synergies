@@ -36,7 +36,9 @@ window.FACTION_DATA = [
       "Vikings"
     ],
     "imageUrl": null,
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": false,
+    "classification": "classified"
   },
   {
     "id": "anansi_tales",
@@ -57,7 +59,7 @@ window.FACTION_DATA = [
       "Elder Things",
       "Ignobles",
       "Minions of Cthulhu",
-      "Superheroes",
+      "Super Heroes",
       "Thieves",
       "Time Travelers",
       "World Champs"
@@ -73,7 +75,9 @@ window.FACTION_DATA = [
     "counterTargets": [
       "Elder Things",
       "Vikings"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "ancient_egyptians",
@@ -97,7 +101,7 @@ window.FACTION_DATA = [
       "Kitty Cats",
       "Luchadors",
       "Mega Troopers",
-      "Superheroes",
+      "Super Heroes",
       "Vampires"
     ],
     "counters": [
@@ -110,7 +114,9 @@ window.FACTION_DATA = [
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/f/fd/SU1052_CoverPhoto_AncientEgyptians.png",
     "counterTargets": [
       "Elder Things"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "ancient_incas",
@@ -148,7 +154,9 @@ window.FACTION_DATA = [
       "Truckers"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/4e/SU1062_CoverPhoto_AncientIncas.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "astroknights",
@@ -179,12 +187,14 @@ window.FACTION_DATA = [
     "counters": [
       "Luchadors",
       "Orcs",
+      "Super Heroes",
       "Super Spies",
-      "Superheroes",
       "Teddy Bears"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/ef/SU1034_CoverPhoto_AstroKnights.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "bear_cavalry",
@@ -231,7 +241,9 @@ window.FACTION_DATA = [
       "Star Roamers",
       "Tricksters",
       "Ultimates"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "beauty_and_the_beast",
@@ -269,7 +281,9 @@ window.FACTION_DATA = [
       "Slashers"
     ],
     "imageUrl": null,
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": false,
+    "classification": "classified"
   },
   {
     "id": "changerbots",
@@ -305,7 +319,9 @@ window.FACTION_DATA = [
       "Teddy Bears"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/1e/SU1035_CoverPhoto_ChangerBots.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "clerics",
@@ -341,7 +357,9 @@ window.FACTION_DATA = [
       "Polynesian Voyagers"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/3/36/SU1086_CoverPhoto_Munchkin_Clerics.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "clowns",
@@ -379,7 +397,9 @@ window.FACTION_DATA = [
       "Vigilantes"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/20/SU1082_CoverPhoto_Clowns.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "cowboys",
@@ -411,7 +431,9 @@ window.FACTION_DATA = [
       "Ninjas"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/21/SU1053_CoverPhoto_Cowboys.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "cyborg_apes",
@@ -449,7 +471,9 @@ window.FACTION_DATA = [
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/d3/SU1017_CoverPhoto_CyborgApes.png",
     "counterTargets": [
       "Cowboys"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "dinosaurs",
@@ -493,7 +517,9 @@ window.FACTION_DATA = [
       "Tricksters"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/8a/SU1002_CoverPhoto_Dinosaurs.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "disco_dancers",
@@ -527,7 +553,9 @@ window.FACTION_DATA = [
       "Super Spies"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e7/SU1046_CoverPhoto_DiscoDancers.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "dwarves",
@@ -558,7 +586,9 @@ window.FACTION_DATA = [
       "Vigilantes"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/a/a0/SU1087_CoverPhoto_Munchkin_Dwarves.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "elder_things",
@@ -604,7 +634,9 @@ window.FACTION_DATA = [
       "Clerics",
       "Kree",
       "Vampires"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "explorers",
@@ -628,7 +660,7 @@ window.FACTION_DATA = [
       "Polynesian Voyagers",
       "Princesses",
       "Steampunks",
-      "Superheroes"
+      "Super Heroes"
     ],
     "counters": [
       "Polynesian Voyagers",
@@ -637,7 +669,9 @@ window.FACTION_DATA = [
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/bc/SU1038_CoverPhoto_Explorers.png",
     "counterTargets": [
       "Giant Ants"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "extramorphs",
@@ -661,7 +695,7 @@ window.FACTION_DATA = [
       "Penguins",
       "Russian Fairy Tales",
       "Shapeshifters",
-      "Superheroes",
+      "Super Heroes",
       "Vampires",
       "Vigilantes",
       "Vikings"
@@ -676,7 +710,9 @@ window.FACTION_DATA = [
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/5/59/SU1074_CoverPhoto_Extramorphs.png",
     "counterTargets": [
       "Anansi Tales"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "fairies",
@@ -712,7 +748,9 @@ window.FACTION_DATA = [
       "Kaiju",
       "Luchadors",
       "Steampunks"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "giant_ants",
@@ -756,7 +794,9 @@ window.FACTION_DATA = [
     "counterTargets": [
       "Samurai",
       "Vampires"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "goblins",
@@ -788,7 +828,9 @@ window.FACTION_DATA = [
       "Truckers"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/3/3f/SU1066_CoverPhoto_Goblins.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "halflings",
@@ -826,7 +868,9 @@ window.FACTION_DATA = [
       "Tricksters"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/1b/SU1089_CoverPhoto_Munchkin_Halflings.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "kaiju",
@@ -866,7 +910,9 @@ window.FACTION_DATA = [
     "counterTargets": [
       "Ancient Incas",
       "Steampunks"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "kitty_cats",
@@ -901,14 +947,16 @@ window.FACTION_DATA = [
       "Frozen",
       "Grannies",
       "Ninjas",
-      "Superheroes",
+      "Super Heroes",
       "Teddy Bears"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/dd/SU1026_CoverPhoto_KittyCats.png",
     "counterTargets": [
       "Giant Ants",
       "Warriors"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "kree",
@@ -945,7 +993,9 @@ window.FACTION_DATA = [
     "imageUrl": null,
     "counterTargets": [
       "Cowboys"
-    ]
+    ],
+    "inWikiCatalogue": false,
+    "classification": "classified"
   },
   {
     "id": "luchadors",
@@ -976,7 +1026,7 @@ window.FACTION_DATA = [
       "Hydra",
       "Orcs",
       "Star Roamers",
-      "Superheroes"
+      "Super Heroes"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/8f/SU1056_CoverPhoto_Luchadores.png",
     "counterTargets": [
@@ -990,7 +1040,9 @@ window.FACTION_DATA = [
       "Princesses",
       "Shapeshifters",
       "Vampires"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "magical_girls",
@@ -1033,7 +1085,9 @@ window.FACTION_DATA = [
     "counterTargets": [
       "Clerics",
       "Vampires"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "masters_of_evil",
@@ -1054,7 +1108,7 @@ window.FACTION_DATA = [
       "Grimms' Fairy Tales",
       "Innsmouth",
       "Killer Plants",
-      "Superheroes",
+      "Super Heroes",
       "The Lion King"
     ],
     "counters": [
@@ -1063,7 +1117,9 @@ window.FACTION_DATA = [
       "Slashers"
     ],
     "imageUrl": null,
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": false,
+    "classification": "classified"
   },
   {
     "id": "mounties",
@@ -1095,7 +1151,9 @@ window.FACTION_DATA = [
       "Polynesian Voyagers"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e7/SU1057_CoverPhoto_Mounties.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "musketeers",
@@ -1134,7 +1192,9 @@ window.FACTION_DATA = [
       "Tricksters"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/b1/SU1058_CoverPhoto_Musketeers.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "mythic_greeks",
@@ -1158,7 +1218,7 @@ window.FACTION_DATA = [
       "Mad Scientists",
       "Mermaids",
       "Musketeers",
-      "Superheroes"
+      "Super Heroes"
     ],
     "counters": [
       "Killer Plants",
@@ -1169,7 +1229,9 @@ window.FACTION_DATA = [
       "Tornados"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/e0/SU1030_CoverPhoto_MythicGreeks.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "mythic_horses",
@@ -1206,7 +1268,9 @@ window.FACTION_DATA = [
       "Tricksters"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/b4/SU1027_CoverPhoto_MythicHorses.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "penguins",
@@ -1243,7 +1307,9 @@ window.FACTION_DATA = [
       "Tricksters"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/cb/SU1060_CoverPhoto_Penguins.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "pirates",
@@ -1278,7 +1344,9 @@ window.FACTION_DATA = [
       "Time Travelers"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/4/42/SU1004_CoverPhoto_Pirates.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "princeses",
@@ -1305,12 +1373,12 @@ window.FACTION_DATA = [
       "Musketeers",
       "Pirates",
       "Russian Fairy Tales",
-      "Superheroes"
+      "Super Heroes"
     ],
     "counters": [
       "Luchadors",
+      "Super Heroes",
       "Super Spies",
-      "Superheroes",
       "Teddy Bears",
       "Time Travelers",
       "Tornados"
@@ -1326,119 +1394,9 @@ window.FACTION_DATA = [
       "Mythic Horses",
       "Penguins",
       "S.H.I.E.L.D."
-    ]
-  },
-  {
-    "id": "samurai",
-    "number": 90,
-    "name": "Samurai",
-    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Samurai",
-    "strengths": [
-      "Bushi",
-      "Interesting dueling cards",
-      "Consistent enough draw to generally smooth over their pain points"
     ],
-    "weaknesses": [
-      "Mediocre non- Bushi minions",
-      "Benefits of self- destruction rarely outweigh costs"
-    ],
-    "partners": [
-      "Adolescent Epic Geckos",
-      "Dinosaurs",
-      "Hydra",
-      "Kitty Cats",
-      "Shapeshifters",
-      "Superheroes"
-    ],
-    "counters": [
-      "Giant Ants",
-      "Killer Plants",
-      "Kung Fu Fighters"
-    ],
-    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/d5/SU1054_CoverPhoto_Samurai.png",
-    "counterTargets": []
-  },
-  {
-    "id": "shapeshifters",
-    "number": 71,
-    "name": "Shapeshifters",
-    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Shapeshifters",
-    "strengths": [
-      "Huge amount of versatility among their minions",
-      "Scales very well to strength of other factions in a game",
-      "Can get exactly the minion(s) you want",
-      "Destruction loophole"
-    ],
-    "weaknesses": [
-      "Many actions are underwhelming",
-      "Extra minion plays are often just a replacement rather than an addition",
-      "Can run out of steam very quickly without a reshuffle or recursion"
-    ],
-    "partners": [
-      "Astroknights",
-      "Bear Cavalry",
-      "Changerbots",
-      "Elder Things",
-      "Extramorphs",
-      "Giant Ants",
-      "Goblins",
-      "Ignobles",
-      "Itty Critters",
-      "Musketeers",
-      "Rulers of the Cosmos",
-      "Samurai",
-      "Superheroes",
-      "Ultimates",
-      "Vampires",
-      "Vigilantes"
-    ],
-    "counters": [
-      "Luchadors",
-      "Ninjas",
-      "Sharks",
-      "Super Spies",
-      "Teddy Bears",
-      "Tricksters"
-    ],
-    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/85/SU1018_CoverPhoto_ShapeShifters.png",
-    "counterTargets": []
-  },
-  {
-    "id": "sheep",
-    "number": 88,
-    "name": "Sheep",
-    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Sheep",
-    "strengths": [
-      "Little Bo Peep shuts down movement factions",
-      "Lots of good movement options",
-      "1 of 2 factions that has a “counterspell”",
-      "Copying scales to opponent strength"
-    ],
-    "weaknesses": [
-      "Mandatory movement requires a lot of forethought and is highly punishable",
-      "Flock is just not an exciting minion to play"
-    ],
-    "partners": [
-      "Elves",
-      "Musketeers",
-      "Mythic Horses",
-      "Pearl and the Images",
-      "Superheroes",
-      "Tornados"
-    ],
-    "counters": [
-      "Bear Cavalry",
-      "Dragons",
-      "Polynesian Voyagers"
-    ],
-    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/cc/SU1069_CoverPhoto_Sheep.png",
-    "counterTargets": [
-      "Changerbots",
-      "Explorers",
-      "Pirates",
-      "Truckers",
-      "Ultimates"
-    ]
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "shield",
@@ -1472,7 +1430,127 @@ window.FACTION_DATA = [
       "Wraithrustlers"
     ],
     "imageUrl": null,
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": false,
+    "classification": "classified"
+  },
+  {
+    "id": "samurai",
+    "number": 90,
+    "name": "Samurai",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Samurai",
+    "strengths": [
+      "Bushi",
+      "Interesting dueling cards",
+      "Consistent enough draw to generally smooth over their pain points"
+    ],
+    "weaknesses": [
+      "Mediocre non- Bushi minions",
+      "Benefits of self- destruction rarely outweigh costs"
+    ],
+    "partners": [
+      "Adolescent Epic Geckos",
+      "Dinosaurs",
+      "Hydra",
+      "Kitty Cats",
+      "Shapeshifters",
+      "Super Heroes"
+    ],
+    "counters": [
+      "Giant Ants",
+      "Killer Plants",
+      "Kung Fu Fighters"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/d/d5/SU1054_CoverPhoto_Samurai.png",
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
+  },
+  {
+    "id": "shapeshifters",
+    "number": 71,
+    "name": "Shapeshifters",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Shapeshifters",
+    "strengths": [
+      "Huge amount of versatility among their minions",
+      "Scales very well to strength of other factions in a game",
+      "Can get exactly the minion(s) you want",
+      "Destruction loophole"
+    ],
+    "weaknesses": [
+      "Many actions are underwhelming",
+      "Extra minion plays are often just a replacement rather than an addition",
+      "Can run out of steam very quickly without a reshuffle or recursion"
+    ],
+    "partners": [
+      "Astroknights",
+      "Bear Cavalry",
+      "Changerbots",
+      "Elder Things",
+      "Extramorphs",
+      "Giant Ants",
+      "Goblins",
+      "Ignobles",
+      "Itty Critters",
+      "Musketeers",
+      "Rulers of the Cosmos",
+      "Samurai",
+      "Super Heroes",
+      "Ultimates",
+      "Vampires",
+      "Vigilantes"
+    ],
+    "counters": [
+      "Luchadors",
+      "Ninjas",
+      "Sharks",
+      "Super Spies",
+      "Teddy Bears",
+      "Tricksters"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/8/85/SU1018_CoverPhoto_ShapeShifters.png",
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
+  },
+  {
+    "id": "sheep",
+    "number": 88,
+    "name": "Sheep",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Sheep",
+    "strengths": [
+      "Little Bo Peep shuts down movement factions",
+      "Lots of good movement options",
+      "1 of 2 factions that has a “counterspell”",
+      "Copying scales to opponent strength"
+    ],
+    "weaknesses": [
+      "Mandatory movement requires a lot of forethought and is highly punishable",
+      "Flock is just not an exciting minion to play"
+    ],
+    "partners": [
+      "Elves",
+      "Musketeers",
+      "Mythic Horses",
+      "Pearl and the Images",
+      "Super Heroes",
+      "Tornados"
+    ],
+    "counters": [
+      "Bear Cavalry",
+      "Dragons",
+      "Polynesian Voyagers"
+    ],
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/c/cc/SU1069_CoverPhoto_Sheep.png",
+    "counterTargets": [
+      "Changerbots",
+      "Explorers",
+      "Pirates",
+      "Truckers",
+      "Ultimates"
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "sinister_six",
@@ -1508,7 +1586,9 @@ window.FACTION_DATA = [
     "imageUrl": null,
     "counterTargets": [
       "Spider-Verse"
-    ]
+    ],
+    "inWikiCatalogue": false,
+    "classification": "classified"
   },
   {
     "id": "spiderman",
@@ -1541,7 +1621,9 @@ window.FACTION_DATA = [
       "Tornados"
     ],
     "imageUrl": null,
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": false,
+    "classification": "classified"
   },
   {
     "id": "star_roamers",
@@ -1568,7 +1650,7 @@ window.FACTION_DATA = [
       "Mythic Horses",
       "Russian Fairy Tales",
       "S.H.I.E.L.D.",
-      "Superheroes",
+      "Super Heroes",
       "Thieves"
     ],
     "counters": [
@@ -1578,7 +1660,9 @@ window.FACTION_DATA = [
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/76/SU1037_CoverPhoto_StarRoamers_Folder.png",
     "counterTargets": [
       "Luchadors"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "steampunks",
@@ -1619,7 +1703,9 @@ window.FACTION_DATA = [
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/7d/SU1012_CoverPhoto_Steampunks.png",
     "counterTargets": [
       "Ancient Incas"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "sumo_wrestlers",
@@ -1654,7 +1740,9 @@ window.FACTION_DATA = [
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/2/2d/SU1059_CoverPhoto_SumoWrestlers.png",
     "counterTargets": [
       "Truckers"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "teddy_bears",
@@ -1681,7 +1769,7 @@ window.FACTION_DATA = [
       "Magical Girls",
       "Mythic Horses",
       "Pearl and the Images",
-      "Superheroes",
+      "Super Heroes",
       "Wreck-It Ralph"
     ],
     "counters": [
@@ -1706,7 +1794,9 @@ window.FACTION_DATA = [
       "Princesses",
       "Shapeshifters",
       "Tricksters"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "teens",
@@ -1738,7 +1828,9 @@ window.FACTION_DATA = [
       "Tricksters"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/b/bf/SU1076_CoverPhoto_Teens_Folder.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "tricksters",
@@ -1769,7 +1861,7 @@ window.FACTION_DATA = [
       "Bear Cavalry",
       "Grannies",
       "Miskatonic University",
-      "Superheroes",
+      "Super Heroes",
       "Teddy Bears",
       "Truckers"
     ],
@@ -1789,7 +1881,9 @@ window.FACTION_DATA = [
       "Teens",
       "Warriors",
       "World Champs"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "truckers",
@@ -1812,7 +1906,7 @@ window.FACTION_DATA = [
       "Kaiju",
       "Killer Plants",
       "Steampunks",
-      "Superheroes",
+      "Super Heroes",
       "Zombies"
     ],
     "counters": [
@@ -1830,7 +1924,9 @@ window.FACTION_DATA = [
       "Sinister Six",
       "Steampunks",
       "Tricksters"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "ultimates",
@@ -1862,7 +1958,9 @@ window.FACTION_DATA = [
       "Sheep"
     ],
     "imageUrl": null,
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": false,
+    "classification": "classified"
   },
   {
     "id": "vampires",
@@ -1890,7 +1988,7 @@ window.FACTION_DATA = [
       "Rulers of the Cosmos",
       "Shapeshifters",
       "Sumo Wrestlers",
-      "Superheroes",
+      "Super Heroes",
       "Tricksters"
     ],
     "counters": [
@@ -1902,7 +2000,9 @@ window.FACTION_DATA = [
       "Magical Girls"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/13/SU1023_CoverPhoto_Vampires.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "vikings",
@@ -1934,7 +2034,9 @@ window.FACTION_DATA = [
     "counterTargets": [
       "Aladdin",
       "Cyborg Apes"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "warriors",
@@ -1974,7 +2076,9 @@ window.FACTION_DATA = [
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/6/63/SU1093_CoverPhoto_Munchkin_Warriors.png",
     "counterTargets": [
       "S.H.I.E.L.D."
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   },
   {
     "id": "world_champs",
@@ -2007,7 +2111,9 @@ window.FACTION_DATA = [
       "Tricksters"
     ],
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/7/71/SU1071_CoverPhoto_WorldChamps.png",
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "classified"
   }
 ];
 window.FACTION_REFERENCE_DATA = [
@@ -2023,7 +2129,9 @@ window.FACTION_REFERENCE_DATA = [
       "Ultimates"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "adolescent-epic-geckos",
@@ -2040,7 +2148,9 @@ window.FACTION_REFERENCE_DATA = [
       "Samurai"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "aliens",
@@ -2054,7 +2164,9 @@ window.FACTION_REFERENCE_DATA = [
     "counters": [],
     "counterTargets": [
       "Pirates"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "avengers",
@@ -2072,7 +2184,9 @@ window.FACTION_REFERENCE_DATA = [
       "Sinister Six"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": false,
+    "classification": "not-yet-classified"
   },
   {
     "id": "backtimers",
@@ -2087,7 +2201,9 @@ window.FACTION_REFERENCE_DATA = [
       "Princesses"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "big-hero-6",
@@ -2103,7 +2219,9 @@ window.FACTION_REFERENCE_DATA = [
       "Teens"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": false,
+    "classification": "not-yet-classified"
   },
   {
     "id": "dragons",
@@ -2136,7 +2254,9 @@ window.FACTION_REFERENCE_DATA = [
       "Teddy Bears",
       "Teens",
       "World Champs"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "elves",
@@ -2157,7 +2277,9 @@ window.FACTION_REFERENCE_DATA = [
       "Clowns",
       "Giant Ants",
       "Spider-Verse"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "frozen",
@@ -2171,7 +2293,37 @@ window.FACTION_REFERENCE_DATA = [
     "counters": [],
     "counterTargets": [
       "Kitty Cats"
-    ]
+    ],
+    "inWikiCatalogue": false,
+    "classification": "not-yet-classified"
+  },
+  {
+    "id": "g-i-gerald",
+    "number": null,
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [],
+    "counters": [],
+    "counterTargets": [],
+    "name": "G.I. Gerald",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/G.I._Gerald",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/e/eb/SU1078_CoverPhoto_G.I._Gerald.png",
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
+  },
+  {
+    "id": "geeks",
+    "number": null,
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [],
+    "counters": [],
+    "counterTargets": [],
+    "name": "Geeks",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Geeks",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/9/9e/SU1050_CoverPhoto_Geeks.png",
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "ghosts",
@@ -2191,7 +2343,9 @@ window.FACTION_REFERENCE_DATA = [
       "Vikings"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "grannies",
@@ -2218,13 +2372,15 @@ window.FACTION_REFERENCE_DATA = [
       "Steampunks",
       "Tricksters",
       "Vampires"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "grimms-fairy-tales",
     "number": null,
     "name": "Grimms' Fairy Tales",
-    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Grimms'_Fairy_Tales",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Grimms%27_Fairy_Tales",
     "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/5/59/SU1063_CoverPhoto_GrimmsFairyTales.png",
     "strengths": [],
     "weaknesses": [],
@@ -2232,7 +2388,9 @@ window.FACTION_REFERENCE_DATA = [
       "Masters of Evil"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "hydra",
@@ -2252,7 +2410,9 @@ window.FACTION_REFERENCE_DATA = [
     "counters": [],
     "counterTargets": [
       "Luchadors"
-    ]
+    ],
+    "inWikiCatalogue": false,
+    "classification": "not-yet-classified"
   },
   {
     "id": "ignobles",
@@ -2270,7 +2430,9 @@ window.FACTION_REFERENCE_DATA = [
     "counters": [],
     "counterTargets": [
       "Vikings"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "innsmouth",
@@ -2287,7 +2449,9 @@ window.FACTION_REFERENCE_DATA = [
       "Vikings"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "itty-critters",
@@ -2312,7 +2476,9 @@ window.FACTION_REFERENCE_DATA = [
     "counters": [],
     "counterTargets": [
       "Aladdin"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "killer-plants",
@@ -2345,7 +2511,9 @@ window.FACTION_REFERENCE_DATA = [
       "Penguins",
       "Samurai",
       "Teddy Bears"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "knights-of-the-round-table",
@@ -2360,7 +2528,9 @@ window.FACTION_REFERENCE_DATA = [
       "Steampunks"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "kung-fu-fighters",
@@ -2385,7 +2555,9 @@ window.FACTION_REFERENCE_DATA = [
       "Teens",
       "Vampires",
       "Warriors"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "mad-scientists",
@@ -2404,7 +2576,9 @@ window.FACTION_REFERENCE_DATA = [
     "counters": [],
     "counterTargets": [
       "Anansi Tales"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "mages",
@@ -2422,7 +2596,9 @@ window.FACTION_REFERENCE_DATA = [
     "counters": [],
     "counterTargets": [
       "Beauty and the Beast"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "mega-troopers",
@@ -2442,7 +2618,9 @@ window.FACTION_REFERENCE_DATA = [
     "counters": [],
     "counterTargets": [
       "Dinosaurs"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "mermaids",
@@ -2463,7 +2641,9 @@ window.FACTION_REFERENCE_DATA = [
       "Magical Girls",
       "Penguins",
       "Sinister Six"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "minions-of-cthulhu",
@@ -2479,7 +2659,9 @@ window.FACTION_REFERENCE_DATA = [
     "counters": [],
     "counterTargets": [
       "Elder Things"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "miskatonic-university",
@@ -2494,7 +2676,9 @@ window.FACTION_REFERENCE_DATA = [
     "counterTargets": [
       "Elder Things",
       "Tricksters"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "mulan",
@@ -2513,7 +2697,9 @@ window.FACTION_REFERENCE_DATA = [
     "counterTargets": [
       "Dwarves",
       "Sinister Six"
-    ]
+    ],
+    "inWikiCatalogue": false,
+    "classification": "not-yet-classified"
   },
   {
     "id": "ninjas",
@@ -2539,7 +2725,9 @@ window.FACTION_REFERENCE_DATA = [
       "Sinister Six",
       "Teddy Bears",
       "Warriors"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "orcs",
@@ -2566,7 +2754,9 @@ window.FACTION_REFERENCE_DATA = [
       "Spider-Verse",
       "Warriors",
       "World Champs"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "pearl-and-the-images",
@@ -2583,7 +2773,9 @@ window.FACTION_REFERENCE_DATA = [
       "Teddy Bears"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "polynesian-voyagers",
@@ -2611,7 +2803,23 @@ window.FACTION_REFERENCE_DATA = [
       "Star Roamers",
       "Truckers",
       "Ultimates"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
+  },
+  {
+    "id": "robots",
+    "number": null,
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [],
+    "counters": [],
+    "counterTargets": [],
+    "name": "Robots",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Robots",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/17/SU1005_CoverPhoto_Robots.png",
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "rock-stars",
@@ -2625,7 +2833,9 @@ window.FACTION_REFERENCE_DATA = [
       "Magical Girls"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "rulers-of-the-cosmos",
@@ -2641,7 +2851,9 @@ window.FACTION_REFERENCE_DATA = [
       "Vampires"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "russian-fairy-tales",
@@ -2665,7 +2877,9 @@ window.FACTION_REFERENCE_DATA = [
       "Dwarves",
       "Giant Ants",
       "Spider-Verse"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "sharks",
@@ -2685,7 +2899,9 @@ window.FACTION_REFERENCE_DATA = [
     "counterTargets": [
       "Masters of Evil",
       "Shapeshifters"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "skeletons",
@@ -2699,7 +2915,9 @@ window.FACTION_REFERENCE_DATA = [
       "Kaiju"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "slashers",
@@ -2718,7 +2936,9 @@ window.FACTION_REFERENCE_DATA = [
       "Halflings",
       "Masters of Evil",
       "Teens"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "smash-up-all-stars",
@@ -2734,7 +2954,44 @@ window.FACTION_REFERENCE_DATA = [
       "World Champs"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
+  },
+  {
+    "id": "superheroes",
+    "number": null,
+    "name": "Super Heroes",
+    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Super_Heroes",
+    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/14/SU1032_CoverPhoto_Superheroes.png",
+    "strengths": [],
+    "weaknesses": [],
+    "partners": [
+      "Anansi Tales",
+      "Ancient Egyptians",
+      "Explorers",
+      "Extramorphs",
+      "Masters of Evil",
+      "Mythic Greeks",
+      "Princesses",
+      "Samurai",
+      "Shapeshifters",
+      "Sheep",
+      "Star Roamers",
+      "Teddy Bears",
+      "Truckers",
+      "Vampires"
+    ],
+    "counters": [],
+    "counterTargets": [
+      "Astroknights",
+      "Kitty Cats",
+      "Luchadors",
+      "Princesses",
+      "Tricksters"
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "super-spies",
@@ -2766,40 +3023,9 @@ window.FACTION_REFERENCE_DATA = [
       "Shapeshifters",
       "Truckers",
       "World Champs"
-    ]
-  },
-  {
-    "id": "superheroes",
-    "number": null,
-    "name": "Superheroes",
-    "officialUrl": "https://smashup-rulebook.alderac.com/wiki/Superheroes",
-    "imageUrl": "https://smashup-rulebook.alderac.com/w/img_auth.php/1/14/SU1032_CoverPhoto_Superheroes.png",
-    "strengths": [],
-    "weaknesses": [],
-    "partners": [
-      "Anansi Tales",
-      "Ancient Egyptians",
-      "Explorers",
-      "Extramorphs",
-      "Masters of Evil",
-      "Mythic Greeks",
-      "Princesses",
-      "Samurai",
-      "Shapeshifters",
-      "Sheep",
-      "Star Roamers",
-      "Teddy Bears",
-      "Truckers",
-      "Vampires"
     ],
-    "counters": [],
-    "counterTargets": [
-      "Astroknights",
-      "Kitty Cats",
-      "Luchadors",
-      "Princesses",
-      "Tricksters"
-    ]
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "the-lion-king",
@@ -2816,7 +3042,9 @@ window.FACTION_REFERENCE_DATA = [
       "Masters of Evil"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": false,
+    "classification": "not-yet-classified"
   },
   {
     "id": "the-nightmare-before-christmas",
@@ -2844,7 +3072,9 @@ window.FACTION_REFERENCE_DATA = [
       "Sinister Six",
       "Sumo Wrestlers",
       "Teens"
-    ]
+    ],
+    "inWikiCatalogue": false,
+    "classification": "not-yet-classified"
   },
   {
     "id": "thieves",
@@ -2863,7 +3093,9 @@ window.FACTION_REFERENCE_DATA = [
     "counterTargets": [
       "Cyborg Apes",
       "Dwarves"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "time-travelers",
@@ -2891,7 +3123,9 @@ window.FACTION_REFERENCE_DATA = [
       "Kaiju",
       "Pirates",
       "Princesses"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "tornados",
@@ -2920,7 +3154,9 @@ window.FACTION_REFERENCE_DATA = [
       "Spider-Verse",
       "Steampunks",
       "Warriors"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "vigilantes",
@@ -2940,7 +3176,9 @@ window.FACTION_REFERENCE_DATA = [
     "counterTargets": [
       "Clowns",
       "Dwarves"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "werewolves",
@@ -2956,7 +3194,9 @@ window.FACTION_REFERENCE_DATA = [
       "Ultimates"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "wizards",
@@ -2976,7 +3216,9 @@ window.FACTION_REFERENCE_DATA = [
     "counters": [],
     "counterTargets": [
       "Elder Things"
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "wraithrustlers",
@@ -2994,7 +3236,9 @@ window.FACTION_REFERENCE_DATA = [
     "counters": [],
     "counterTargets": [
       "S.H.I.E.L.D."
-    ]
+    ],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   },
   {
     "id": "wreck-it-ralph",
@@ -3008,7 +3252,9 @@ window.FACTION_REFERENCE_DATA = [
       "Teddy Bears"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": false,
+    "classification": "not-yet-classified"
   },
   {
     "id": "zombies",
@@ -3023,6 +3269,8 @@ window.FACTION_REFERENCE_DATA = [
       "Truckers"
     ],
     "counters": [],
-    "counterTargets": []
+    "counterTargets": [],
+    "inWikiCatalogue": true,
+    "classification": "not-yet-classified"
   }
 ];

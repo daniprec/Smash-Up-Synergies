@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Smash Up Synergies</title>
-  <link rel="stylesheet" href="styles.css?v=20261111-1">
+  <link rel="stylesheet" href="styles.css?v=20261111-4">
 </head>
 <body>
   <header>
@@ -18,14 +18,20 @@
         <button class="filter active" data-edge-type="pair" type="button" aria-pressed="true"><i class="line pair"></i>Pairs</button>
         <button class="filter active counter-filter" data-edge-type="counter" type="button" aria-pressed="true"><i class="line counter"></i>Counters</button>
       </div>
-      <button id="rankings" type="button">Rankings</button>
+      <label class="sort-control"><span>Sort By</span><select id="sort-by">
+        <option value="alphabetical">Alphabetically</option>
+        <option value="overall">Overall ranking</option>
+        <option value="synergies">Synergies</option>
+        <option value="counteredBy">Countered by</option>
+        <option value="countersOthers">They counter</option>
+      </select></label>
       <button id="artwork" type="button" aria-pressed="false">Artwork</button>
       <button id="reset" type="button">Reset view</button>
     </div>
   </header>
   <main>
-    <section class="faction-browser" aria-labelledby="faction-list-title">
-      <div class="browser-heading"><h2 id="faction-list-title">Factions A–Z</h2><p id="faction-count" role="status"></p></div>
+    <section class="faction-browser" aria-label="Factions">
+      <div class="browser-heading"><p id="faction-count" role="status"></p></div>
       <ul id="faction-list" class="faction-list"></ul>
       <p id="no-factions" class="no-factions" hidden>No factions match your search. Try another name.</p>
       <p class="browser-credit">Rankings and synergies are based on two-player games and the analysis by <a href="https://www.youtube.com/@UseTheFoursPodcast" target="_blank" rel="noopener noreferrer">Use The Fours</a>. Unofficial fan resource; not affiliated with Use The Fours or AEG.</p>
@@ -34,8 +40,8 @@
       <div class="legend">
         <span><i class="line pair"></i>Good pair</span>
         <span><i class="line counter"></i>Counter → countered</span>
-        <span><i class="dot source"></i>Card faction</span>
-        <span><i class="dot reference"></i>Referenced faction</span>
+        <span><i class="dot source"></i>Classified</span>
+        <span><i class="dot reference"></i>Not yet classified</span>
       </div>
       <svg id="graph" role="img" aria-label="Interactive network of Smash Up factions"></svg>
       <div class="hint">Drag nodes · scroll to zoom · drag empty space to pan</div>
@@ -52,7 +58,7 @@
       </div>
     </aside>
   </main>
-  <script src="data.js?v=20261001-6"></script>
-  <script src="app.js?v=20261111-1"></script>
+  <script src="data.js?v=20261111-2"></script>
+  <script src="app.js?v=20261111-4"></script>
 </body>
 </html>
