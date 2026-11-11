@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Smash Up Synergy Graph</title>
-  <link rel="stylesheet" href="styles.css?v=20261001-6">
+  <title>Smash Up Synergies</title>
+  <link rel="stylesheet" href="styles.css?v=20261111-1">
 </head>
 <body>
   <header>
     <div>
       <p class="eyebrow">Based on Use The Fours: A Smash Up Podcast</p>
-      <h1>Smash Up Synergy Graph</h1>
+      <h1>Smash Up Synergies</h1>
     </div>
     <div class="controls">
       <label class="search"><span>Search</span><input id="search" type="search" list="faction-options" autocomplete="off" placeholder="Find a faction…"><datalist id="faction-options"></datalist></label>
@@ -24,6 +24,12 @@
     </div>
   </header>
   <main>
+    <section class="faction-browser" aria-labelledby="faction-list-title">
+      <div class="browser-heading"><h2 id="faction-list-title">Factions A–Z</h2><p id="faction-count" role="status"></p></div>
+      <ul id="faction-list" class="faction-list"></ul>
+      <p id="no-factions" class="no-factions" hidden>No factions match your search. Try another name.</p>
+      <p class="browser-credit">Rankings and synergies are based on two-player games and the analysis by <a href="https://www.youtube.com/@UseTheFoursPodcast" target="_blank" rel="noopener noreferrer">Use The Fours</a>. Unofficial fan resource; not affiliated with Use The Fours or AEG.</p>
+    </section>
     <section class="graph-shell" aria-label="Faction relationship graph">
       <div class="legend">
         <span><i class="line pair"></i>Good pair</span>
@@ -35,15 +41,18 @@
       <div class="hint">Drag nodes · scroll to zoom · drag empty space to pan</div>
       <div class="credit"><p>Rankings and synergies are based on two-player games. <a href="https://www.youtube.com/@UseTheFoursPodcast" target="_blank" rel="noopener noreferrer">Listen to the official Use The Fours podcast ↗</a></p><p>Unofficial fan-made resource. Not affiliated with or endorsed by Use The Fours, AEG, or the creators of Smash Up.</p></div>
     </section>
-    <aside id="details" aria-live="polite">
+    <aside id="details-panel" aria-label="Faction details">
+      <button id="back-to-factions" type="button">← Back to factions</button>
+      <div id="details" aria-live="polite">
       <div class="empty-state">
         <span class="empty-icon">✦</span>
         <h2>Select a faction</h2>
         <p>Click any node to inspect its strengths, weaknesses, pairings, and counters.</p>
       </div>
+      </div>
     </aside>
   </main>
   <script src="data.js?v=20261001-6"></script>
-  <script src="app.js?v=20261001-6"></script>
+  <script src="app.js?v=20261111-1"></script>
 </body>
 </html>

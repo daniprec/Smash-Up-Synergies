@@ -2,14 +2,20 @@
   const svg = document.querySelector('#graph');
   const details = document.querySelector('#details');
   const search = document.querySelector('#search');
+  const main = document.querySelector('main');
+  const factionList = document.querySelector('#faction-list');
+  const factionCount = document.querySelector('#faction-count');
+  const noFactions = document.querySelector('#no-factions');
+  const backButton = document.querySelector('#back-to-factions');
+  const mobile = window.matchMedia('(max-width: 850px)');
   const factionOptions = document.querySelector('#faction-options');
   const filterButtons = [...document.querySelectorAll('.filter')];
   const rankingsButton = document.querySelector('#rankings');
   const artworkButton = document.querySelector('#artwork');
   const resetButton = document.querySelector('#reset');
   const NS = 'http://www.w3.org/2000/svg';
-  const width = () => svg.clientWidth;
-  const height = () => svg.clientHeight;
+  const width = () => svg.clientWidth || 900;
+  const height = () => svg.clientHeight || 700;
   const sources = window.FACTION_DATA;
   const references = window.FACTION_REFERENCE_DATA || [];
   const allFactions = [...sources, ...references];
@@ -79,6 +85,66 @@
   let artworkReady = false;
   let dragged = null;
   let pan = null;
+  let listScroll = 0;
+  let returnFocus = null;
+  const alphabeticalNodes = [...nodes].sort((a, b) => a.id.localeCompare(b.id, 'en'));
+  const listRows = new Map();
+  for (const node of alphabeticalNodes) {
+    const li = document.createElement('li');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'faction-row';
+    const name = document.createElement('span');
+    name.className = 'faction-row-name';
+    name.textContent = node.id;
+    const caption = document.createElement('span');
+    caption.className = 'faction-row-caption';
+    caption.textContent = node.source ? 'View strengths, pairs & counters' : 'Referenced faction · View connections';
+    const arrow = document.createElement('span');
+    arrow.className = 'faction-row-arrow';
+    arrow.textContent = '›';
+    arrow.setAttribute('aria-hidden', 'true');
+    button.append(name, caption, arrow);
+    button.addEventListener('click', () => selectNode(node));
+    li.append(button);
+    factionList.append(li);
+    listRows.set(node, li);
+  }
+  function matchesSearch(node) {
+    const query = search.value.trim().toLocaleLowerCase();
+    return !query || node.id.toLocaleLowerCase().includes(query);
+  }
+  function applySearch() {
+    let count = 0;
+    for (const node of nodes) {
+      const matches = matchesSearch(node);
+      node.el.classList.toggle('search-hidden', !matches);
+      listRows.get(node).hidden = !matches;
+      if (matches) count++;
+    }
+    factionCount.textContent = `${count} of ${nodes.length} factions`;
+    noFactions.hidden = count !== 0;
+    applyEdgeFilters();
+  }
+  function openMobileDetails() {
+    if (!mobile.matches) return;
+    if (!main.classList.contains('detail-open')) {
+      listScroll = window.scrollY;
+      returnFocus = document.activeElement;
+    }
+    main.classList.add('detail-open');
+    document.querySelector('#details-panel').scrollTop = 0;
+    window.scrollTo(0, 0);
+    backButton.focus({ preventScroll: true });
+  }
+  function backToFactions() {
+    main.classList.remove('detail-open');
+    if (mobile.matches) {
+      window.scrollTo(0, listScroll);
+      if (returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
+    }
+  }
+  backButton.addEventListener('click', backToFactions);
   const connected = (node) => new Set(edges.filter((e) => e.source===node || e.target===node).flatMap((e) => [e.source,e.target]));
   function render() {
     viewport.setAttribute('transform', `translate(${transform.x} ${transform.y}) scale(${transform.k})`);
@@ -91,6 +157,7 @@
 
   let ticks = 0;
   function simulate() {
+    if (mobile.matches) return;
     if (ticks++ < 620) {
       const charge = nodes.length > 120 ? 1300 : 1700;
       for (let i=0;i<nodes.length;i++) for (let j=i+1;j<nodes.length;j++) {
@@ -123,6 +190,7 @@
     const number = f.number ? `FACTION #${f.number}` : 'REFERENCED FACTION';
     details.innerHTML = `${hero}<div class="detail-body"><span class="detail-number">${number}</span><h2>${escapeHtml(f.name)}</h2>${officialPage}${listSection('Strengths','strength',f.strengths)}${listSection('Weaknesses','weakness',f.weaknesses)}${chipSection('Good pairs','partner',f.partners)}${chipSection('Countered by','counter',f.counters)}${chipSection('Counter of','counter',f.counterTargets || [], 'Nothing')}<p class="detail-credit">Based on the analysis done in Use The Fours. <a href="https://www.youtube.com/@UseTheFoursPodcast" target="_blank" rel="noopener noreferrer">Link here!</a></p></div>`;
     details.querySelectorAll('.chip').forEach((chip) => chip.addEventListener('click', () => selectNode(nodeById.get(chip.dataset.name))));
+    openMobileDetails();
   }
   function listSection(title, cls, items) { return `<section class="section ${cls}"><h3>${title}</h3>${items.length ? `<ul>${items.map((x)=>`<li>${escapeHtml(x)}</li>`).join('')}</ul>` : '<p class="empty-copy">—</p>'}</section>`; }
   function chipSection(title, cls, items, emptyLabel = '—') { return `<section class="section ${cls}"><h3>${title}</h3>${items.length ? `<div class="chips">${items.map((x)=>`<button class="chip ${cls==='counter'?'counter':''}" data-name="${escapeHtml(x)}">${escapeHtml(x)}</button>`).join('')}</div>` : `<p class="empty-copy">${emptyLabel}</p>`}</section>`; }
@@ -142,6 +210,7 @@
     details.innerHTML = `<div class="rankings-body"><span class="detail-number">FACTION OVERVIEW</span><h2>${definition.title}</h2><p class="rankings-intro">${definition.description}</p><div class="ranking-tabs">${Object.entries(rankingDefinitions).map(([key,item])=>`<button class="ranking-tab ${key===mode?'active':''}" data-ranking="${key}" type="button">${item.label}</button>`).join('')}</div><ol class="ranking-list">${ranked.map((faction,index)=>`<li><button class="ranking-row" data-name="${escapeHtml(faction.name)}" type="button"><span class="ranking-position">${index+1}</span><span class="ranking-name">${escapeHtml(faction.name)}</span><span class="ranking-count">${definition.value(faction)}</span></button></li>`).join('')}</ol></div>`;
     details.querySelectorAll('.ranking-tab').forEach((button)=>button.addEventListener('click',()=>showRankings(button.dataset.ranking)));
     details.querySelectorAll('.ranking-row').forEach((button)=>button.addEventListener('click',()=>selectNode(nodeById.get(button.dataset.name))));
+    openMobileDetails();
   }
 
   function point(event) { const rect=svg.getBoundingClientRect(); return { x:(event.clientX-rect.left-transform.x)/transform.k, y:(event.clientY-rect.top-transform.y)/transform.k }; }
@@ -152,7 +221,12 @@
   svg.addEventListener('wheel',(e)=>{e.preventDefault();const rect=svg.getBoundingClientRect(),mx=e.clientX-rect.left,my=e.clientY-rect.top,old=transform.k,next=Math.max(.25,Math.min(3,old*Math.exp(-e.deltaY*.001)));transform.x=mx-(mx-transform.x)*next/old;transform.y=my-(my-transform.y)*next/old;transform.k=next;render()},{passive:false});
   svg.addEventListener('click',()=>clearSelection());
   function clearSelection(){selected=null;for(const n of nodes)n.el.classList.remove('selected','dim');for(const e of edges)e.el.classList.remove('active','dim');}
-  search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();for(const n of nodes)n.el.classList.toggle('dim',q&&!n.id.toLowerCase().includes(q));const exact=nodes.find(n=>n.id.toLowerCase()===q);if(exact)selectNode(exact)});
+  search.addEventListener('input', applySearch);
+  search.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter') return;
+    const exact = nodes.find((node) => node.id.toLocaleLowerCase() === search.value.trim().toLocaleLowerCase());
+    if (exact) selectNode(exact);
+  });
   filterButtons.forEach((button) => button.addEventListener('click', () => {
     const type = button.dataset.edgeType;
     if (visibleEdgeTypes.has(type)) visibleEdgeTypes.delete(type); else visibleEdgeTypes.add(type);
@@ -181,8 +255,12 @@
     artworkButton.classList.toggle('active', artworkEnabled);
     artworkButton.setAttribute('aria-pressed', String(artworkEnabled));
   });
-  function applyEdgeFilters() { for (const edge of edges) edge.el.style.display = visibleEdgeTypes.has(edge.type) ? '' : 'none'; }
+  function applyEdgeFilters() { for (const edge of edges) edge.el.style.display = visibleEdgeTypes.has(edge.type) && matchesSearch(edge.source) && matchesSearch(edge.target) ? '' : 'none'; }
   resetButton.addEventListener('click',()=>{transform={x:0,y:0,k:1};search.value='';clearSelection();rankingsButton.classList.remove('active');visibleEdgeTypes.clear();visibleEdgeTypes.add('pair');visibleEdgeTypes.add('counter');for(const button of filterButtons){button.classList.add('active');button.setAttribute('aria-pressed','true')}applyEdgeFilters();render()});
+  resetButton.addEventListener('click', () => { applySearch(); backToFactions(); });
+  mobile.addEventListener('change', () => {
+    if (!mobile.matches) { main.classList.remove('detail-open'); simulate(); }
+  });
   window.addEventListener('resize',render);
-  render(); simulate();
+  applySearch(); render(); simulate();
 })();
